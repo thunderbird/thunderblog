@@ -78,7 +78,7 @@ hr {
 	text-transform: uppercase;
 }
 
-/* page */
+/* page elements */
 header {
 	align-items: center;
 	background: var(--c-primary-dark);
@@ -110,6 +110,7 @@ main > .featured {
 	height: var(--featured-height);
 	justify-content: center;
 	margin-bottom: 3rem;
+	padding: 0 1rem;
 }
 main > .featured article {
 	position: relative;
@@ -145,14 +146,14 @@ main > .featured article .meta ion-icon {
 }
 main > .featured article .description {
 	margin: 2rem 0 3rem 0;
-	max-width: 60%;
 }
 main > .articles {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: 1fr;
 	gap: 2rem;
 	max-width: var(--content-width);
 	margin: 2rem auto;
+	padding: 0 1rem;
 }
 main > .articles article {
 	box-shadow: 0 5px 20px -15px black;
@@ -181,7 +182,7 @@ footer {
 	background: black;
 	color: white;
 	margin-top: 5rem;
-	padding: 3rem 0 5rem 0;
+	padding: 3rem 2rem 5rem 2rem;
 }
 footer .logo {
 	display: block;
@@ -215,6 +216,35 @@ footer .columns section ul li {
 	margin-bottom: .75rem;
 }
 
+/* responsivness */
+.show-m,
+.show-l {
+	display: none;
+}
+@media screen and (min-width: 640px) {
+	/* break: S */
+	main > .articles {
+		grid-template-columns: 1fr 1fr;
+	}
+	main > .featured article .description {
+		max-width: 60%;
+	}
+}
+@media screen and (min-width: 1000px) {
+	/* break: M */
+	main > .articles {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.show-m {
+		display: initial;
+	}
+}
+@media screen and (min-width: 1200px) {
+	/* break: L */
+	.show-l {
+		display: initial;
+	}
+}
 
 /* utilities */
 .text-center {
