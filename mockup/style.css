@@ -85,8 +85,8 @@ header {
 	box-shadow: 0 10px 15px 0 rgba(0,0,0,0.3);
 	color: white;
 	display: flex;
+	gap: 2rem;
 	height: 72px;
-	justify-content: space-between;
 	padding: 0 1rem;
 	position: sticky;
 	top: 0;
@@ -219,4 +219,7 @@ footer .columns section ul li {
 /* utilities */
 .text-center {
 	text-align: center;
+}
+.ml-auto {
+	margin-left: auto;
 }
