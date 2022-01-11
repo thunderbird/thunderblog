@@ -9,6 +9,8 @@
 	--c-secondary-accent: #34343a;
 	--c-secondary-light: #ffffff;
 	--c-secondary-light-accent: #cacad8;
+	--content-width: 1080px;
+	--featured-height: 450px;
 }
 
 html, body {
@@ -88,6 +90,7 @@ header {
 	padding: 0 1rem;
 	position: sticky;
 	top: 0;
+	z-index: 50;
 }
 header .logo img {
 	flex-grow: 0;
@@ -104,14 +107,28 @@ header nav ul {
 main > .featured {
 	background: linear-gradient(135deg, var(--c-primary-dark-accent) 0%, var(--c-primary-dark) 100%);
 	display: flex;
-	height: 400px;
+	height: var(--featured-height);
 	justify-content: center;
 	margin-bottom: 3rem;
 }
 main > .featured article {
+	position: relative;
 	color: white;
-	margin-top: 3rem;
-	max-width: 920px;
+	margin: 3rem 0;
+	max-width: var(--content-width);
+}
+main > .featured article > * {
+	position: relative;
+	z-index: 10;
+}
+main > .featured article > img {
+	position: absolute;
+	right: 0;
+	top: 0;
+	max-height: calc(var(--featured-height) - 6rem);
+	-webkit-mask-image:-webkit-gradient(linear, right top, left top, from(black), to(transparent));
+	mask-image: linear-gradient(to left, black, transparent);
+	z-index: 0;
 }
 main > .featured article .category {
 	background: white;
@@ -134,12 +151,18 @@ main > .articles {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 2rem;
-	max-width: 920px;
+	max-width: var(--content-width);
 	margin: 2rem auto;
 }
 main > .articles article {
 	box-shadow: 0 5px 20px -15px black;
 	padding: 1rem;
+}
+main > .articles article .thumb {
+	height: 12rem;
+	margin: -1rem -1rem 1rem -1rem;
+	background-size: cover;
+	background-position: center;
 }
 main > .articles article .categories {
 	margin: 0;
@@ -169,12 +192,12 @@ footer .logo img {
 	height: 48px;
 }
 footer hr {
-	max-width: 920px;
+	max-width: var(--content-width);
 	margin: 3rem auto;
 }
 footer .columns {
 	display: flex;
-	max-width: 920px;
+	max-width: var(--content-width);
 	margin: 0 auto;
 	justify-content: space-between;
 }
