@@ -132,7 +132,7 @@ main > .featured article {
 	margin: 2rem 0 3rem 0;
 	max-width: var(--content-width);
 	display: grid;
-	grid-template-columns: 3fr 2fr;
+	grid-template-columns: 1fr;
 	align-items: center;
 	gap: 2rem;
 }
@@ -251,6 +251,9 @@ footer .columns section ul li {
 	/* break: M */
 	main > .articles {
 		grid-template-columns: 1fr 1fr 1fr;
+	}
+	main > .featured article {
+		grid-template-columns: 3fr 2fr;
 	}
 	.show-m {
 		display: initial;
