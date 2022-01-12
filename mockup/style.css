@@ -215,9 +215,14 @@ footer hr {
 }
 footer .columns {
 	display: flex;
+	flex-wrap: wrap;
 	max-width: var(--content-width);
 	margin: 0 auto;
+	gap: 1rem;
 	justify-content: space-between;
+}
+footer .columns section {
+	min-width: 180px;
 }
 footer .columns section ul {
 	margin: 0;
