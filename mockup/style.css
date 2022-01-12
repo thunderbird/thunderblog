@@ -11,6 +11,7 @@
 	--c-secondary-light-accent: #cacad8;
 	--content-width: 1080px;
 	--featured-height: 450px;
+	--border-radius: 3px;
 }
 
 html, body {
@@ -48,8 +49,14 @@ hr {
 	border: none;
 	background: var(--c-secondary-accent);
 }
+a, a:link {
+	color: var(--c-secondary-accent);
+}
+a:hover {
+	color: var(--c-primary-accent);
+}
 .btn {
-	border-radius: 0.1rem;
+	border-radius: var(--border-radius);
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 	font-weight: 600;
 	padding: .75rem 1.25rem;
@@ -69,8 +76,15 @@ hr {
 	background: linear-gradient(135deg, var(--c-secondary-light) 0%, var(--c-secondary-light-accent) 100%);
 	color: black;
 }
+.btn.btn-link {
+	padding: .25rem 0;
+	color: var(--c-secondary-accent);
+	text-transform: initial;
+	box-shadow: none;
+	text-decoration: underline;
+}
 .category {
-	border-radius: .1rem;
+	border-radius: var(--border-radius);
 	display: inline-block;
 	font-size: .85rem;
 	font-weight: 600;
@@ -115,21 +129,16 @@ main > .featured {
 main > .featured article {
 	position: relative;
 	color: white;
-	margin: 3rem 0;
+	margin: 2rem 0 3rem 0;
 	max-width: var(--content-width);
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	align-items: center;
+	gap: 2rem;
 }
-main > .featured article > * {
-	position: relative;
-	z-index: 10;
-}
-main > .featured article > img {
-	position: absolute;
-	right: 0;
-	top: 0;
+main > .featured img {
 	max-height: calc(var(--featured-height) - 6rem);
-	-webkit-mask-image:-webkit-gradient(linear, right top, left top, from(black), to(transparent));
-	mask-image: linear-gradient(to left, black, transparent);
-	z-index: 0;
+	width: 100%;
 }
 main > .featured article .category {
 	background: white;
@@ -156,7 +165,7 @@ main > .articles {
 	padding: 0 1rem;
 }
 main > .articles article {
-	box-shadow: 0 5px 20px -15px black;
+	box-shadow: 0 5px 15px -10px rgba(0, 0, 0, 0.6), 0 0 3px rgba(0, 0, 0, 0.1);
 	padding: 1rem;
 }
 main > .articles article .thumb {
@@ -165,6 +174,14 @@ main > .articles article .thumb {
 	background-size: cover;
 	background-position: center;
 }
+main > .articles article > a:not(.btn) {
+	color: black;
+	display: inline-block;
+	text-decoration: none;
+}
+main > .articles article > a:not(.btn):hover {
+	text-decoration: underline;
+}
 main > .articles article .categories {
 	margin: 0;
 	padding: 0;
@@ -172,11 +189,11 @@ main > .articles article .categories {
 	gap: .5rem;
 }
 main > .articles article .categories .category {
-	background:  var(--c-secondary);
+	background:  var(--c-primary-dark-accent);
 	color: white;
 }
 main > .articles article .summary {
-	margin: 1rem 0;
+	margin: .25rem 0;
 }
 footer {
 	background: black;
