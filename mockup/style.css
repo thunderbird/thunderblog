@@ -290,6 +290,9 @@ main.post .content figure {
 main.post .content figure img {
 	width: 100%;
 }
+main.post .content figure figcaption {
+	text-align: center;
+}
 main.post .social {
 	margin: 4rem 0 0 0;
 	border-top: 1px solid var(--c-secondary-light-accent);
