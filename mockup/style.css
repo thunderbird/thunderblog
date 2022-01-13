@@ -5,10 +5,12 @@
 	--c-primary-dark: #1c2f56;
 	--c-primary-dark-accent: #233e74;
 	--c-primary-light: #93abdc;
-	--c-secondary: #45454b;
-	--c-secondary-accent: #34343a;
-	--c-secondary-light: #ffffff;
-	--c-secondary-light-accent: #cacad8;
+	--c-love: #f23d5c;
+	--c-love-accent: #b92f51;
+	--c-neutral: #45454b;
+	--c-neutral-accent: #34343a;
+	--c-neutral-light: #ffffff;
+	--c-neutral-light-accent: #cacad8;
 	--c-twitter: #1d9bf0;
 	--c-linkedin: #0a66c2;
 	--content-width: 1080px;
@@ -49,10 +51,10 @@ h4 {
 hr {
 	height: 1px;
 	border: none;
-	background: var(--c-secondary-accent);
+	background: var(--c-neutral-accent);
 }
 a, a:link {
-	color: var(--c-secondary-accent);
+	color: var(--c-neutral-accent);
 	transition: all .15s ease-in-out;
 }
 a:hover {
@@ -71,17 +73,20 @@ a:hover {
 	background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-primary-accent) 100%);
 	color: white;
 }
-.btn.btn-secondary {
-	background: linear-gradient(135deg, var(--c-secondary) 0%, var(--c-secondary-accent) 100%);
+.btn.btn-love {
+	background: linear-gradient(135deg, #f23d5c 0%, #b92f51 100%);
 	color: white;
 }
-.btn.btn-secondary-light {
-	background: linear-gradient(135deg, var(--c-secondary-light) 0%, var(--c-secondary-light-accent) 100%);
-	color: black;
+.btn.btn-neutral {
+	background: linear-gradient(135deg, var(--c-neutral) 0%, var(--c-neutral-accent) 100%);
+	color: white;
+}
+.btn.btn-neutral-light {
+	background: linear-gradient(135deg, var(--c-neutral-light) 0%, var(--c-neutral-light-accent) 100%);
 }
 .btn.btn-link {
 	padding: .25rem 0;
-	color: var(--c-secondary-accent);
+	color: var(--c-neutral-accent);
 	text-transform: initial;
 	box-shadow: none;
 	text-decoration: underline;
@@ -127,6 +132,10 @@ header nav ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+}
+header .actions {
+	display: flex;
+	gap: .5rem;
 }
 footer {
 	background: black;
@@ -295,7 +304,7 @@ main.post .content figure figcaption {
 }
 main.post .social {
 	margin: 4rem 0 0 0;
-	border-top: 1px solid var(--c-secondary-light-accent);
+	border-top: 1px solid var(--c-neutral-light-accent);
 	display: flex;
 	justify-content: center;
 	gap: 2rem;
@@ -303,7 +312,7 @@ main.post .social {
 	padding-top: 1.5rem;
 }
 main.post .social a {
-	color: var(--c-secondary);
+	color: var(--c-neutral);
 }
 main.post .social a:hover {
 	transform: scale(1.1);
@@ -349,33 +358,40 @@ main.post .comments > .comment ~ .comment {
 
 /* responsivness */
 .show-m,
-.show-l {
+.show-l,
+.show-xl {
 	display: none;
 }
 @media screen and (min-width: 640px) {
-	/* break: S */
+	/* break: S -> M */
 	main > .articles {
 		grid-template-columns: 1fr 1fr;
 	}
 	main > .featured article .description {
 		max-width: 60%;
 	}
+	.hide-m {
+		display: none;
+	}
+	.show-m {
+		display: initial;
+	}
 }
 @media screen and (min-width: 1000px) {
-	/* break: M */
+	/* break: M -> L */
 	main > .articles {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 	main > .featured article {
 		grid-template-columns: 3fr 2fr;
 	}
-	.show-m {
+	.show-l {
 		display: initial;
 	}
 }
 @media screen and (min-width: 1200px) {
-	/* break: L */
-	.show-l {
+	/* break: L -> XL */
+	.show-xl {
 		display: initial;
 	}
 }
