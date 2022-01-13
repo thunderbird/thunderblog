@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Thunderblog</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<a class="logo" href="http://https://blog.thunderbird.net">
+			<img src="./logo.svg" alt="Logo" />
+		</a>
+		<nav class="show-m">
+			<ul>
+				<li>Add-ons</li>
+				<li>Announcements</li>
+				<li>Releases</li>
+				<li>Product</li>
+				<li>More</li>
+			</ul>
+		</nav>
+		<ion-icon name="search-outline" size="large" class="search ml-auto"></ion-icon>
+		<div class="download">
+			<a class="btn btn-primary" href="https://www.thunderbird.net/download/" target="_blank">
+				Download<span class="show-l"> Thunderbird</span>
+			</a>
+		</div>
+	</header>
+	<main class="post">
+		<img class="title-image" src="./thumb_00.png" alt="featured article title image">
+		<section class="content">
+			<!-- title and meta -->
+			<span class="category">Releases</span>
+			<h1>Thunderbird 91 Available Now</h1>
+			<div class="meta">
+				<time><ion-icon name="calendar-outline"></ion-icon> 12th Aug 2021</time>
+				<span class="author"><ion-icon name="person-outline"></ion-icon> Ryan Sipes</span>
+				<a href="#post-footer" class="responses"><ion-icon name="chatbubbles-outline"></ion-icon> 27 responses</a>
+			</div>
+			<!-- content -->
+			<p>The newest stable release of Thunderbird, version 91, is <a href="https://thunderbird.net?utm_source=blog&amp;utm_medium=91-post&amp;utm_campaign=Thunderbird+91&amp;utm_id=91">available for download on our website now</a>. Existing Thunderbird users will be updated to the newest version in the coming weeks.</p>
+			<p>Thunderbird 91 is our biggest release in years with a ton of new features, bug fixes and polish across the app. This past year had its challenges for the Thunderbird team, our community and our users. But in the midst of a global pandemic, the important role that email plays in our lives became even more obvious. Our team was blown away by the support we received in terms of donations and open source contributions and we extend a big thanks to everyone who helped out Thunderbird in the lead up to this release.</p>
+			<p>There are a ton of changes in the new Thunderbird, you can see them all <a href="https://www.thunderbird.net/en-US/thunderbird/91.0/releasenotes/">in the release notes</a>. In this post we&#8217;ll focus on the most notable and visible ones.</p>
+			<h2>Multi-Process Support (Faster Thunderbird)</h2>
+			<p>Thunderbird has gotten faster with multi-process support. The new multi-process Thunderbird takes better advantage of the processor in your computer by splitting up the application into multiple smaller processes instead of running as one large one. That&#8217;s a lot of geekspeak to say that Thunderbird 91 will feel like it got a speed boost.</p>
+			<h2>New Account Setup</h2>
+			<p>One of the most noticeable changes for Thunderbird 91 is the new account setup wizard. The new wizard not only features a better look, but does auto-discovery of calendars and address books and allows most users to set them up with just a click. After setting up an account, the wizard also points users at additional (optional) things to do &#8211; such as adding a signature or setting up end-to-end encryption.</p>
+			<figure>
+				<a href="https://blog.thunderbird.net/files/2021/08/account-setup-thunderbird-91.png">
+					<img loading="lazy" src="https://blog.thunderbird.net/files/2021/08/account-setup-thunderbird-91-768x503.png" alt="Account Setup Wizard" width="768" srcset="https://blog.thunderbird.net/files/2021/08/account-setup-thunderbird-91-600x393.png 600w, https://blog.thunderbird.net/files/2021/08/account-setup-thunderbird-91-252x165.png 252w, https://blog.thunderbird.net/files/2021/08/account-setup-thunderbird-91-768x503.png 768w, https://blog.thunderbird.net/files/2021/08/account-setup-thunderbird-91.png 1189w" sizes="(max-width: 768px) 100vw, 768px" />
+				</a>
+				<figcaption>The New Account Setup Wizard</figcaption>
+			</figure>
+			<h2>Attachments Pane + Drag-and-Drop Overlay</h2>
+			<p>The attachments pane has been moved to the bottom of the compose window for better visibility of filenames as well as being able to see many at once. We&#8217;ve also added an overlay that appears when you drag-and-drop a file into the compose window asking how you would like to handle the file in that email (such as putting a picture in-line in your message or simply attaching it to the email).</p>
+			<figure>
+				<a href="https://blog.thunderbird.net/files/2021/08/Screenshot-from-2021-08-07-12-09-07.png">
+					<img loading="lazy" src="https://blog.thunderbird.net/files/2021/08/Screenshot-from-2021-08-07-12-09-07-768x739.png" alt="The Thunderbird compose window with the attachment pane at the bottom." width="768" srcset="https://blog.thunderbird.net/files/2021/08/Screenshot-from-2021-08-07-12-09-07-600x577.png 600w, https://blog.thunderbird.net/files/2021/08/Screenshot-from-2021-08-07-12-09-07-252x242.png 252w, https://blog.thunderbird.net/files/2021/08/Screenshot-from-2021-08-07-12-09-07-768x739.png 768w, https://blog.thunderbird.net/files/2021/08/Screenshot-from-2021-08-07-12-09-07.png 861w" sizes="(max-width: 768px) 100vw, 768px" />
+				</a>
+				<figcaption>Compose window with bottom attachment pane.</figcaption>
+			</figure>
+			<figure>
+				<a href="https://blog.thunderbird.net/files/2021/08/overlay-thunderbird-91.png">
+					<img loading="lazy" src="https://blog.thunderbird.net/files/2021/08/overlay-thunderbird-91-768x738.png" alt="The new attachment drag-and-drop overlay." width="768" srcset="https://blog.thunderbird.net/files/2021/08/overlay-thunderbird-91-600x577.png 600w, https://blog.thunderbird.net/files/2021/08/overlay-thunderbird-91-252x242.png 252w, https://blog.thunderbird.net/files/2021/08/overlay-thunderbird-91-768x738.png 768w, https://blog.thunderbird.net/files/2021/08/overlay-thunderbird-91.png 880w" sizes="(max-width: 768px) 100vw, 768px" />
+				</a>
+				<figcaption>The new attachment drag-and-drop overlay.</figcaption>
+			</figure>
+			<h2>PDF Viewer</h2>
+			<p>Thunderbird now has a built-in PDF viewer, which means you can read and even do some editing on PDFs sent to you as attachments. You can do all this without ever leaving Thunderbird, allowing you to return to your inbox without missing a beat.</p>
+			<figure>
+				<a href="https://blog.thunderbird.net/files/2021/08/pdf-viewer-91.png">
+					<img loading="lazy" src="https://blog.thunderbird.net/files/2021/08/pdf-viewer-91-768x420.png" alt="The PDF Viewer in Thunderbird 91" width="768" srcset="https://blog.thunderbird.net/files/2021/08/pdf-viewer-91-600x328.png 600w, https://blog.thunderbird.net/files/2021/08/pdf-viewer-91-252x138.png 252w, https://blog.thunderbird.net/files/2021/08/pdf-viewer-91-768x420.png 768w, https://blog.thunderbird.net/files/2021/08/pdf-viewer-91-1536x839.png 1536w, https://blog.thunderbird.net/files/2021/08/pdf-viewer-91.png 1922w" sizes="(max-width: 768px) 100vw, 768px" />
+				</a>
+				<figcaption>The PDF Viewer in Thunderbird 91</figcaption>
+			</figure>
+			<h2>UI Density Control</h2>
+			<p>Depending on how you use Thunderbird and whether you are using it on a large desktop monitor or a small laptop touchscreen, you may want the icons and text of the interface to be larger and more spread out or very compact. In Thunderbird 91 under the View -&gt; Density in the menu, you can select the UI density for the entire application. Three options are available: compact &#8211; which puts everything closer together, normal &#8211; the experience you are accustomed to in Thunderbird, and touch &#8211; that makes icons bigger and separates elements.</p>
+			<p>Play around with this new level of control and find what works best for you!</p>
+			<figure>
+				<a href="https://blog.thunderbird.net/files/2021/08/UI-Density-Control.png">
+					<img loading="lazy" src="https://blog.thunderbird.net/files/2021/08/UI-Density-Control-768x420.png" alt="UI density control option" width="768" srcset="https://blog.thunderbird.net/files/2021/08/UI-Density-Control-600x328.png 600w, https://blog.thunderbird.net/files/2021/08/UI-Density-Control-252x138.png 252w, https://blog.thunderbird.net/files/2021/08/UI-Density-Control-768x420.png 768w, https://blog.thunderbird.net/files/2021/08/UI-Density-Control-1536x841.png 1536w, https://blog.thunderbird.net/files/2021/08/UI-Density-Control.png 1920w" sizes="(max-width: 768px) 100vw, 768px" />
+				</a>
+				<figcaption>UI density control options</figcaption>
+			</figure>
+			<h2>Calendar Sidebar Improvements</h2>
+			<p>Managing multiple calendars has been made easier with the calendar sidebar improvements in this release. There is a quick enable button for disabled calendars, as well as a show/hide icon for easily toggling what calendars are visible. There is also a lock indicator for read-only calendars. Additionally, although not a sidebar improvement, there are now better color accents to highlight the current day in the calendar.</p>
+			<figure>
+				<a href="https://blog.thunderbird.net/files/2021/08/calendar-sidebar.png">
+					<img loading="lazy" src="https://blog.thunderbird.net/files/2021/08/calendar-sidebar-768x420.png" alt="The improved calendar sidebar." width="768" srcset="https://blog.thunderbird.net/files/2021/08/calendar-sidebar-600x328.png 600w, https://blog.thunderbird.net/files/2021/08/calendar-sidebar-252x138.png 252w, https://blog.thunderbird.net/files/2021/08/calendar-sidebar-768x420.png 768w, https://blog.thunderbird.net/files/2021/08/calendar-sidebar-1536x839.png 1536w, https://blog.thunderbird.net/files/2021/08/calendar-sidebar.png 1922w" sizes="(max-width: 768px) 100vw, 768px" />
+				</a>
+				<figcaption>Improved Calendar sidebar</figcaption>
+			</figure>
+			<h2>Better Dark Theme</h2>
+			<p>Thunderbird&#8217;s Dark Theme got even better in this release. In the past some windows and dialogues looked a bit out of place if you had Thunderbird&#8217;s dark theme selected. Now almost every dialogue and window in Thunderbird is fully styled to respect the user&#8217;s color scheme preferences.</p>
+			<figure>
+				<a href="https://blog.thunderbird.net/files/2021/08/Screenshot-from-2021-08-11-18-42-01.png">
+					<img loading="lazy" src="https://blog.thunderbird.net/files/2021/08/Screenshot-from-2021-08-11-18-42-01-768x420.png" alt="Dark Theme Screenshot" width="768" srcset="https://blog.thunderbird.net/files/2021/08/Screenshot-from-2021-08-11-18-42-01-600x328.png 600w, https://blog.thunderbird.net/files/2021/08/Screenshot-from-2021-08-11-18-42-01-252x138.png 252w, https://blog.thunderbird.net/files/2021/08/Screenshot-from-2021-08-11-18-42-01-768x420.png 768w, https://blog.thunderbird.net/files/2021/08/Screenshot-from-2021-08-11-18-42-01-1536x839.png 1536w, https://blog.thunderbird.net/files/2021/08/Screenshot-from-2021-08-11-18-42-01.png 1922w" sizes="(max-width: 768px) 100vw, 768px" />
+				</a>
+				<figcaption>Dark Theme</figcaption>
+			</figure>
+			<h2>Other Notable Mentions</h2>
+			<p>You really have to scroll through <a href="https://www.thunderbird.net/en-US/thunderbird/91.0/releasenotes/">the release notes</a> as there are a lot of little changes that make Thunderbird 91 feel really polished. Some other notable mentions are:</p>
+			<ul>
+				<li>Native support for macOS devices built with Apple Silicon CPU</li>
+				<li>CardDAV Address Book Support (and CardDAV auto-detection support)</li>
+				<li>Printing UI updated</li>
+				<li>Ability to change order of accounts in UI</li>
+				<li>Support opening of .ics files by double-click in calendar</li>
+			</ul>
+			<h2>A Bright Future</h2>
+			<p>The new Thunderbird is a release that the team and community are proud of. Much of what was improved in this newest version was built upon the foundation we&#8217;ve been laying for the last three years. The next release will feature a new address book, further end-to-end encrypted email improvements, better Import/Export tools, a ton of calendar improvements and lots of amazing stuff that we&#8217;re not ready to talk about yet.</p>
+			<p>If you love Thunderbird and you want to see your favorite Email client get even better, we are supported by donations from our users and volunteer contributions from our community. Please consider helping us out with your expertise or with a donation if you appreciate the work that we are doing.</p>
+			<p><a href="https://give.thunderbird.net">Click Here to Donate to Thunderbird</a></p>
+			<p><a href="https://developer.thunderbird.net">Click Here to Get Involved in Thunderbird&#8217;s Development</a></p>
+		</section>
+		<section class="social" id="post-footer">
+			<a href="#" class="social-twitter">
+				<ion-icon name="logo-twitter"></ion-icon>	
+			</a>
+			<a href="#" class="social-linkedin">
+				<ion-icon name="logo-linkedin"></ion-icon>
+			</a>
+		</section>
+		<section class="comments">
+			<h2>27 responses</h2>
+			<div class="comment">
+				<div class="avatar">
+					<img alt="" src="https://secure.gravatar.com/avatar/34b4c6858226380d4c1a9682268fd09b?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/34b4c6858226380d4c1a9682268fd09b?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64" loading="lazy">
+				</div>
+				<h3 class="comment-meta">
+					<cite>Filipe Saraiva</cite>
+					wrote on
+					<time>August 13, 2021 at 00:32</time>:
+				</h3>
+				<blockquote>
+					Congratulations, you are amazing! Finally carddav support! Hope see native system tray support for Linux, as it is provided to Windows. <img draggable="false" role="img" class="emoji" alt="🙂" src="https://s.w.org/images/core/emoji/13.1.0/svg/1f642.svg"> Thank you a lot!!!
+				</blockquote>
+				<div class="replies">
+					<div class="comment">
+						<div class="avatar">
+							<img alt="" src="https://secure.gravatar.com/avatar/5de4ed3493a0b69deb970dc8d3058698?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/5de4ed3493a0b69deb970dc8d3058698?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64" loading="lazy">
+						</div>
+						<h3 class="comment-meta">
+							<cite>Ryan Sipes</cite>
+							wrote on
+							<time>August 18, 2021 at 14:22</time>:
+						</h3>
+						<blockquote>
+							We definitely have to figure out how to do this in a way that works really great across the different desktops. Which desktop environment are you using?
+						</blockquote>
+						<div class="replies"></div>
+					</div>
+				</div>
+			</div>
+			<div class="comment">
+				<div class="avatar">
+					<img alt="" src="https://secure.gravatar.com/avatar/34b4c6858226380d4c1a9682268fd09b?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/34b4c6858226380d4c1a9682268fd09b?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64" loading="lazy">
+				</div>
+				<h3 class="comment-meta">
+					<cite>Filipe Saraiva</cite>
+					wrote on
+					<time>August 13, 2021 at 00:32</time>:
+				</h3>
+				<blockquote>
+					Congratulations, you are amazing! Finally carddav support! Hope see native system tray support for Linux, as it is provided to Windows. <img draggable="false" role="img" class="emoji" alt="🙂" src="https://s.w.org/images/core/emoji/13.1.0/svg/1f642.svg"> Thank you a lot!!!
+				</blockquote>
+				<div class="replies">
+					<div class="comment">
+						<div class="avatar">
+							<img alt="" src="https://secure.gravatar.com/avatar/5de4ed3493a0b69deb970dc8d3058698?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/5de4ed3493a0b69deb970dc8d3058698?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64" loading="lazy">
+						</div>
+						<h3 class="comment-meta">
+							<cite>Ryan Sipes</cite>
+							wrote on
+							<time>August 18, 2021 at 14:22</time>:
+						</h3>
+						<blockquote>
+							We definitely have to figure out how to do this in a way that works really great across the different desktops. Which desktop environment are you using?
+						</blockquote>
+						<div class="replies"></div>
+					</div>
+					<div class="comment">
+						<div class="avatar">
+							<img alt="" src="https://secure.gravatar.com/avatar/5de4ed3493a0b69deb970dc8d3058698?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/5de4ed3493a0b69deb970dc8d3058698?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64" loading="lazy">
+						</div>
+						<h3 class="comment-meta">
+							<cite>Ryan Sipes</cite>
+							wrote on
+							<time>August 18, 2021 at 14:22</time>:
+						</h3>
+						<blockquote>
+							We definitely have to figure out how to do this in a way that works really great across the different desktops. Which desktop environment are you using?
+						</blockquote>
+						<div class="replies"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<a class="logo" href="http://https://blog.thunderbird.net">
+			<img src="./logo.svg" alt="Logo" />
+		</a>
+		<div class="columns">
+			<section>
+				<h4>Thunderbird</h4>
+				<ul>
+					<li>About</li>
+					<li>Download</li>
+					<li>Features</li>
+					<li>Beta, Nightly</li>
+				</ul>
+			</section>
+			<section>
+				<h4>Ressourcen</h4>
+				<ul>
+					<li>Privacy Hub</li>
+					<li>Email Client Comparison</li>
+					<li>Brand Standards</li>
+				</ul>
+			</section>
+			<section>
+				<h4>Contact</h4>
+				<ul>
+					<li>Contact Us</li>
+					<li>Donate</li>
+					<li>Follow @Thunderbird</li>
+					<li>Follow @Mozilla</li>
+				</ul>
+			</section>
+		</div>
+		<hr />
+		<div class="columns">
+			<section>
+				<ul class="inline">
+					<li>Website Privacy Notice</li>
+					<li>Cookies</li>
+					<li>Legal</li>
+				</ul>
+			</section>
+		</div>
+	</footer>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

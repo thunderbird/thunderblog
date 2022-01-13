@@ -9,6 +9,8 @@
 	--c-secondary-accent: #34343a;
 	--c-secondary-light: #ffffff;
 	--c-secondary-light-accent: #cacad8;
+	--c-twitter: #1d9bf0;
+	--c-linkedin: #0a66c2;
 	--content-width: 1080px;
 	--featured-height: 450px;
 	--border-radius: 3px;
@@ -51,6 +53,7 @@ hr {
 }
 a, a:link {
 	color: var(--c-secondary-accent);
+	transition: all .15s ease-in-out;
 }
 a:hover {
 	color: var(--c-primary-accent);
@@ -91,8 +94,16 @@ a:hover {
 	padding: 0 .25rem;
 	text-transform: uppercase;
 }
+.emoji {
+	display: inline;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em;
+	vertical-align: -0.1em;
+	background: none;
+}
 
-/* page elements */
+/* global page elements */
 header {
 	align-items: center;
 	background: var(--c-primary-dark);
@@ -117,7 +128,50 @@ header nav ul {
 	margin: 0;
 	padding: 0;
 }
+footer {
+	background: black;
+	color: white;
+	margin-top: 5rem;
+	padding: 3rem 2rem 5rem 2rem;
+}
+footer .logo {
+	display: block;
+	text-align: center;
+	margin-bottom: 2rem;;
+}
+footer .logo img {
+	height: 48px;
+}
+footer hr {
+	max-width: var(--content-width);
+	margin: 3rem auto;
+}
+footer .columns {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: var(--content-width);
+	margin: 0 auto;
+	gap: 1rem;
+	justify-content: space-between;
+}
+footer .columns section {
+	min-width: 180px;
+}
+footer .columns section ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+footer .columns section ul.inline {
+	display: flex;
+	gap: 2rem;
+}
+footer .columns section ul li {
+	font-size: .9rem;
+	margin-bottom: .75rem;
+}
 
+/* landing page content */
 main > .featured {
 	background: linear-gradient(135deg, var(--c-primary-dark-accent) 0%, var(--c-primary-dark) 100%);
 	display: flex;
@@ -195,47 +249,95 @@ main > .articles article .categories .category {
 main > .articles article .summary {
 	margin: .25rem 0;
 }
-footer {
-	background: black;
-	color: white;
-	margin-top: 5rem;
-	padding: 3rem 2rem 5rem 2rem;
-}
-footer .logo {
-	display: block;
-	text-align: center;
-	margin-bottom: 2rem;;
-}
-footer .logo img {
-	height: 48px;
-}
-footer hr {
+
+/* single article content */
+main.post {
 	max-width: var(--content-width);
+	margin: 2rem auto;
+	padding: 0 1rem;
+}
+main.post .title-image {
+	width: 100%;
+}
+main.post .content,
+main.post .comments {
+	max-width: 768px;
 	margin: 3rem auto;
 }
-footer .columns {
+main.post .content .category {
+	background:  var(--c-primary-dark-accent);
+	color: white;
+}
+main.post .content .meta {
+	margin-bottom: 3rem;
 	display: flex;
-	flex-wrap: wrap;
-	max-width: var(--content-width);
-	margin: 0 auto;
-	gap: 1rem;
-	justify-content: space-between;
+	gap: 1.5rem;
 }
-footer .columns section {
-	min-width: 180px;
+main.post .content .meta ion-icon {
+	margin-bottom: 3px;
+	vertical-align: middle;
 }
-footer .columns section ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+main.post .content h2 {
+	margin-top: 3rem;
 }
-footer .columns section ul.inline {
+main.post .content figure {
+	margin: 1rem 0;
+}
+main.post .content figure img {
+	width: 100%;
+}
+main.post .social {
+	margin: 4rem 0 0 0;
+	border-top: 1px solid var(--c-secondary-light-accent);
 	display: flex;
+	justify-content: center;
 	gap: 2rem;
+	font-size: 2rem;
+	padding-top: 1.5rem;
 }
-footer .columns section ul li {
-	font-size: .9rem;
-	margin-bottom: .75rem;
+main.post .social a {
+	color: var(--c-secondary);
+}
+main.post .social a:hover {
+	transform: scale(1.1);
+}
+main.post .social a.social-twitter:hover {
+	color: var(--c-twitter);
+}
+main.post .social a.social-linkedin:hover {
+	color: var(--c-linkedin);
+}
+main.post .comments h2 {
+	margin: 2rem 0;
+}
+main.post .comments .comment {
+	display: grid;
+	grid-template: 
+		"avatar  meta"    auto
+		"avatar  quote"   auto
+		"replies replies" auto / 64px auto;
+	gap: 1rem;
+}
+main.post .comments .comment > .avatar {
+	grid-area: avatar;
+}
+main.post .comments .comment > h3 {
+	font-size: 1rem;
+	margin: 0;
+	grid-area: meta;
+}
+main.post .comments .comment > blockquote {
+	margin: 0;
+	grid-area: quote;
+}
+main.post .comments .comment > .replies {
+	grid-area: replies;
+}
+main.post .comments .comment > .replies > .comment {
+	margin: 1rem 0 0 2.5rem;
+}
+main.post .comments > .comment ~ .comment {
+	margin-top: 3rem;
 }
 
 /* responsivness */
