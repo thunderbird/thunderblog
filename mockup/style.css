@@ -257,7 +257,11 @@ main.post {
 	padding: 0 1rem;
 }
 main.post .title-image {
-	width: 100%;
+	width: auto;
+	max-width: 100%;
+	max-height: 600px;
+	display: block;
+	margin: 0 auto;
 }
 main.post .content,
 main.post .comments {
