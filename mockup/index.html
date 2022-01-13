@@ -48,6 +48,10 @@
 		</div>
 	</header>
 	<main>
+		<section class="search-form" id="search-form">
+			<input type="search" name="search" placeholder="Search ..." />
+			<button class="btn btn-neutral">Search</button>
+		</section>
 		<section class="featured">
 			<article>
 				<div class="content">
@@ -241,5 +245,14 @@
 			</section>
 		</div>
 	</footer>
+	<script>
+		// toggle search form
+		const trigger = document.querySelector('#search');
+		const form = document.querySelector('#search-form');
+		trigger.addEventListener('click', () => {
+			console.log(form.style.marginTop);
+			form.style.marginTop = form.style.marginTop=='0px' ? '-80px' : '0';
+		});
+	</script>
 </body>
 </html>
