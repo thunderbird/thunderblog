@@ -99,6 +99,19 @@ a:hover {
 	padding: 0 .25rem;
 	text-transform: uppercase;
 }
+.icon {
+	stroke: var(--c-neutral-light);
+	stroke-width: 1.5;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill: none;
+	width: 24px;
+	height: 24px;
+}
+.icon.icon-s {
+	width: 16px;
+	height: 16px;
+}
 .emoji {
 	display: inline;
 	height: 1em !important;
@@ -136,6 +149,17 @@ header nav ul {
 header .actions {
 	display: flex;
 	gap: .5rem;
+}
+header .actions .btn {
+	position: relative;
+	min-width: 1rem;
+	min-height: 1.5rem;
+}
+header .actions .btn .icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 footer {
 	background: black;
@@ -212,9 +236,13 @@ main > .featured article .meta {
 	display: flex;
 	gap: 1.5rem;
 }
-main > .featured article .meta ion-icon {
-	margin-bottom: 3px;
-	vertical-align: middle;
+main > .featured article .meta > * {
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+}
+main > .featured article .meta .icon {
+	stroke: var(--c-primary-light);
 }
 main > .featured article .description {
 	margin: 2rem 0 3rem 0;
@@ -286,9 +314,13 @@ main.post .content .meta {
 	display: flex;
 	gap: 1.5rem;
 }
-main.post .content .meta ion-icon {
-	margin-bottom: 3px;
-	vertical-align: middle;
+main.post .content .meta > * {
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+}
+main.post .content .meta .icon {
+	stroke: var(--c-primary-dark-accent);
 }
 main.post .content h2 {
 	margin-top: 3rem;
@@ -311,17 +343,17 @@ main.post .social {
 	font-size: 2rem;
 	padding-top: 1.5rem;
 }
-main.post .social a {
-	color: var(--c-neutral);
+main.post .social a .icon {
+	stroke: var(--c-neutral);
 }
 main.post .social a:hover {
 	transform: scale(1.1);
 }
-main.post .social a.social-twitter:hover {
-	color: var(--c-twitter);
+main.post .social a.social-twitter:hover .icon {
+	stroke: var(--c-twitter);
 }
-main.post .social a.social-linkedin:hover {
-	color: var(--c-linkedin);
+main.post .social a.social-linkedin:hover .icon {
+	stroke: var(--c-linkedin);
 }
 main.post .comments h2 {
 	margin: 2rem 0;

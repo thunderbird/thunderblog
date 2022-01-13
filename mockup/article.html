@@ -12,7 +12,7 @@
 		<a class="logo" href="https://blog.thunderbird.net">
 			<img src="./logo.svg" alt="Logo" />
 		</a>
-		<nav class="show-m">
+		<nav class="show-l">
 			<ul>
 				<li>Add-ons</li>
 				<li>Announcements</li>
@@ -21,10 +21,29 @@
 				<li>More</li>
 			</ul>
 		</nav>
-		<ion-icon name="search-outline" size="large" class="search ml-auto"></ion-icon>
-		<div class="download">
+		<div class="search ml-auto" id="search">
+			<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+				<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+				<circle cx="10" cy="10" r="7" />
+				<line x1="21" y1="21" x2="15" y2="15" />
+			</svg>
+		</div>
+		<div class="actions">
 			<a class="btn btn-primary" href="https://www.thunderbird.net/download/" target="_blank">
-				Download<span class="show-l"> Thunderbird</span>
+				<span class="show-m">Download<span class="show-xl"> Thunderbird</span></span>
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon hide-m" viewBox="0 0 24 24">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+					<path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+					<polyline points="7 11 12 16 17 11" />
+					<line x1="12" y1="4" x2="12" y2="16" />
+				</svg>
+			</a>
+			<a class="btn btn-love" href="https://give.thunderbird.net" target="_blank">
+				<span class="show-m">Donate</span>
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon hide-m" viewBox="0 0 24 24">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+					<path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+				</svg>
 			</a>
 		</div>
 	</header>
@@ -35,9 +54,33 @@
 			<span class="category">Releases</span>
 			<h1>Thunderbird 91 Available Now</h1>
 			<div class="meta">
-				<time><ion-icon name="calendar-outline"></ion-icon> 12th Aug 2021</time>
-				<span class="author"><ion-icon name="person-outline"></ion-icon> Ryan Sipes</span>
-				<a href="#post-footer" class="responses"><ion-icon name="chatbubbles-outline"></ion-icon> 27 responses</a>
+				<time>
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-s" viewBox="0 0 24 24">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+						<rect x="4" y="5" width="16" height="16" rx="2" />
+						<line x1="16" y1="3" x2="16" y2="7" />
+						<line x1="8" y1="3" x2="8" y2="7" />
+						<line x1="4" y1="11" x2="20" y2="11" />
+						<rect x="8" y="15" width="2" height="2" />
+					</svg>
+					12th Aug 2021
+				</time>
+				<span class="author">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-s" viewBox="0 0 24 24">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+						<circle cx="12" cy="7" r="4" />
+						<path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+					</svg>
+					Ryan Sipes
+				</span>
+				<a href="#post-footer" class="responses">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-s" viewBox="0 0 24 24">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+						<path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+						<path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+					</svg>
+					27 responses
+				</a>
 			</div>
 			<!-- content -->
 			<p>The newest stable release of Thunderbird, version 91, is <a href="https://thunderbird.net?utm_source=blog&utm_medium=91-post&utm_campaign=Thunderbird+91&utm_id=91">available for download on our website now</a>. Existing Thunderbird users will be updated to the newest version in the coming weeks.</p>
@@ -117,10 +160,20 @@
 		</section>
 		<section class="social" id="post-footer">
 			<a href="#" class="social-twitter">
-				<ion-icon name="logo-twitter"></ion-icon>	
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+					<path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+				</svg>
 			</a>
 			<a href="#" class="social-linkedin">
-				<ion-icon name="logo-linkedin"></ion-icon>
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+					<rect x="4" y="4" width="16" height="16" rx="2" />
+					<line x1="8" y1="11" x2="8" y2="16" />
+					<line x1="8" y1="8" x2="8" y2="8.01" />
+					<line x1="12" y1="16" x2="12" y2="11" />
+					<path d="M16 16v-3a2 2 0 0 0 -4 0" />
+				</svg>
 			</a>
 		</section>
 		<section class="comments">
@@ -242,7 +295,5 @@
 			</section>
 		</div>
 	</footer>
-	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
