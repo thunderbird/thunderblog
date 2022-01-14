@@ -96,6 +96,11 @@ input {
 	box-shadow: none;
 	text-decoration: underline;
 }
+.btn.btn-icon {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
 .category {
 	border-radius: var(--border-radius);
 	display: inline-block;
@@ -300,6 +305,14 @@ nav.mobile-nav ul li a {
 	text-decoration: none;
 	padding: .75rem;
 }
+nav.mobile-nav .actions {
+	display: flex;
+	flex-direction: column;
+	justify-content: right;
+	align-items: flex-end;
+	gap: .5rem;
+	padding: 0 3rem;
+}
 
 /* landing page content */
 main > .featured {
@@ -488,8 +501,9 @@ main.post .comments > .comment ~ .comment {
 /* responsivness */
 .show-m,
 .show-l,
-.show-xl {
-	display: none;
+.show-xl,
+.show-xxl {
+	display: none !important;
 }
 @media screen and (min-width: 640px) {
 	/* break: S -> M */
@@ -503,28 +517,37 @@ main.post .comments > .comment ~ .comment {
 		display: none !important;
 	}
 	.show-m {
-		display: initial;
+		display: initial !important;
+	}
+}
+@media screen and (min-width: 720px) {
+	/* break: M -> L */
+	.hide-l {
+		display: none !important;
+	}
+	.show-l {
+		display: initial !important;
 	}
 }
 @media screen and (min-width: 1000px) {
-	/* break: M -> L */
+	/* break: L -> XL */
 	main > .articles {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 	main > .featured article {
 		grid-template-columns: 3fr 2fr;
 	}
-	.hide-l,
+	.hide-xl,
 	nav.mobile-nav.active {
 		display: none !important;
 	}
-	.show-l {
-		display: initial;
+	.show-xl {
+		display: initial !important;
 	}
 }
 @media screen and (min-width: 1200px) {
-	/* break: L -> XL */
-	.show-xl {
+	/* break: XL -> XXL */
+	.show-xxl {
 		display: initial;
 	}
 }
