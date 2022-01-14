@@ -46,11 +46,33 @@
 				</svg>
 			</a>
 		</div>
+		<div class="mobile-menu hide-l" id="mobile-menu">
+			<svg xmlns="http://www.w3.org/2000/svg" class="icon open" viewBox="0 0 24 24">
+				<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+				<line x1="4" y1="6" x2="20" y2="6" />
+				<line x1="4" y1="12" x2="20" y2="12" />
+				<line x1="4" y1="18" x2="20" y2="18" />
+			</svg>
+			<svg xmlns="http://www.w3.org/2000/svg" class="icon close" viewBox="0 0 24 24">
+				<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+				<line x1="18" y1="6" x2="6" y2="18" />
+				<line x1="6" y1="6" x2="18" y2="18" />
+			</svg>
+		</div>
 	</header>
 	<aside class="search-form" id="search-form">
 		<input type="search" name="search" placeholder="Search ..." />
 		<button class="btn btn-neutral">Search</button>
 	</aside>
+	<nav id="mobile" class="mobile-nav">
+		<ul>
+			<li>Add-ons</li>
+			<li>Announcements</li>
+			<li>Releases</li>
+			<li>Product</li>
+			<li>More</li>
+		</ul>
+	</nav>
 	<main>
 		<section class="featured">
 			<article>
@@ -247,11 +269,17 @@
 	</footer>
 	<script>
 		// toggle search form
-		const trigger = document.querySelector('#search');
-		const form = document.querySelector('#search-form');
-		trigger.addEventListener('click', () => {
-			console.log(form.style.marginTop);
-			form.style.marginTop = form.style.marginTop=='0px' ? '-80px' : '0';
+		const searchTrigger = document.querySelector('#search');
+		const searchForm = document.querySelector('#search-form');
+		searchTrigger.addEventListener('click', () => {
+			searchForm.classList.toggle('active');
+		});
+		// toggle mobile menu
+		const mobileTrigger = document.querySelector('#mobile-menu');
+		const mobileNav = document.querySelector('#mobile');
+		mobileTrigger.addEventListener('click', () => {
+			mobileNav.classList.toggle('active');
+			mobileTrigger.classList.toggle('active');
 		});
 	</script>
 </body>
