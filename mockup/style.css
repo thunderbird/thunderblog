@@ -53,7 +53,7 @@ hr {
 	border: none;
 	background: var(--c-neutral-accent);
 }
-a, a:link {
+a {
 	color: var(--c-neutral-accent);
 	transition: all .1s ease-in-out;
 }
