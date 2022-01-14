@@ -55,7 +55,7 @@ hr {
 }
 a, a:link {
 	color: var(--c-neutral-accent);
-	transition: all .15s ease-in-out;
+	transition: all .1s ease-in-out;
 }
 a:hover {
 	color: var(--c-primary-accent);
@@ -151,6 +151,10 @@ header nav ul {
 	margin: 0;
 	padding: 0;
 	align-items: center;
+}
+header nav ul li a {
+	color: inherit;
+	text-decoration: none;
 }
 header .search {
 	padding: .5rem;
@@ -278,13 +282,23 @@ nav.mobile-nav.active {
 }
 nav.mobile-nav ul {
 	display: flex;
-	gap: 1.5rem;
+	gap: .5rem;
 	list-style-type: none;
 	margin: 0;
-	padding: 2rem;
+	padding: 4rem 3rem;
 	flex-direction: column;
 	justify-content: right;
 	align-items: flex-end;
+}
+nav.mobile-nav ul li {
+	min-width: 50%;
+	text-align: right;
+}
+nav.mobile-nav ul li a {
+	display: block;
+	font-size: 1.25em;
+	text-decoration: none;
+	padding: .75rem;
 }
 
 /* landing page content */
