@@ -60,6 +60,9 @@ a, a:link {
 a:hover {
 	color: var(--c-primary-accent);
 }
+input {
+	transition: background .2s, border .2s, box-shadow .2s, color .2s, -webkit-box-shadow .2s;
+}
 .btn {
 	border-radius: var(--border-radius);
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -69,6 +72,7 @@ a:hover {
 	text-transform: uppercase;
 	display: inline-block;
 	border: none;
+	cursor: pointer;
 }
 .btn.btn-primary {
 	background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-primary-accent) 100%);
@@ -210,7 +214,7 @@ footer .columns section ul li {
 }
 
 /* search form */
-main > .search-form {
+aside.search-form {
 	padding: 1rem;
 	display: flex;
 	justify-content: center;
@@ -220,11 +224,17 @@ main > .search-form {
 	box-sizing: border-box;
 	transition: margin .2s ease-in-out;
 }
-main > .search-form input {
+aside.search-form input {
 	padding: .25rem 1rem;
 	font-size: 1rem;
 	width: 100%;
 	max-width: 500px;
+	border: 2px solid var(--c-neutral-light-accent);
+}
+aside.search-form input:focus {
+	border-color: var(--c-neutral-accent);
+	box-shadow: 0 0 0 .2rem rgba(0,0,0,.2);
+	border-radius: 0;
 }
 
 /* landing page content */
