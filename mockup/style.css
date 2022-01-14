@@ -209,7 +209,7 @@ footer .columns section ul li {
 	margin-bottom: .75rem;
 }
 
-/* landing page content */
+/* search form */
 main > .search-form {
 	padding: 1rem;
 	display: flex;
@@ -226,6 +226,8 @@ main > .search-form input {
 	width: 100%;
 	max-width: 500px;
 }
+
+/* landing page content */
 main > .featured {
 	background: linear-gradient(135deg, var(--c-primary-dark-accent) 0%, var(--c-primary-dark) 100%);
 	display: flex;
@@ -311,7 +313,7 @@ main > .articles article .summary {
 /* single article content */
 main.post {
 	max-width: var(--content-width);
-	margin: 2rem auto;
+	margin: 0 auto 2rem auto;
 	padding: 0 1rem;
 }
 main.post .title-image {
@@ -319,7 +321,7 @@ main.post .title-image {
 	max-width: 100%;
 	max-height: 600px;
 	display: block;
-	margin: 0 auto;
+	margin: 2rem auto 0 auto;
 }
 main.post .content,
 main.post .comments {
