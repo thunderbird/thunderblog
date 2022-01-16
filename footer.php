@@ -13,32 +13,9 @@
 	<footer>
 		<?php get_template_part('parts/logo'); ?>
 		<div class="columns">
-			<section>
-				<h4>Thunderbird</h4>
-				<ul>
-					<li>About</li>
-					<li>Download</li>
-					<li>Features</li>
-					<li>Beta, Nightly</li>
-				</ul>
-			</section>
-			<section>
-				<h4>Ressourcen</h4>
-				<ul>
-					<li>Privacy Hub</li>
-					<li>Email Client Comparison</li>
-					<li>Brand Standards</li>
-				</ul>
-			</section>
-			<section>
-				<h4>Contact</h4>
-				<ul>
-					<li>Contact Us</li>
-					<li>Donate</li>
-					<li>Follow @Thunderbird</li>
-					<li>Follow @Mozilla</li>
-				</ul>
-			</section>
+			<section><?php if (is_active_sidebar('footer-1')) dynamic_sidebar('footer-1'); ?></section>
+			<section><?php if (is_active_sidebar('footer-2')) dynamic_sidebar('footer-2'); ?></section>
+			<section><?php if (is_active_sidebar('footer-3')) dynamic_sidebar('footer-3'); ?></section>
 		</div>
 		<hr />
 		<div class="columns">
