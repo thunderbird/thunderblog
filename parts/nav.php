@@ -1,6 +1,6 @@
 <?php
 /**
- * Displays the site navigation.
+ * Displays the primary site navigation.
  *
  * @package WordPress
  * @subpackage Thunderblog

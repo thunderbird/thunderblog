@@ -43,11 +43,15 @@
 		<hr />
 		<div class="columns">
 			<section>
-				<ul class="inline">
-					<li>Website Privacy Notice</li>
-					<li>Cookies</li>
-					<li>Legal</li>
-				</ul>
+				<?php
+				if (has_nav_menu('footer')) {
+					wp_nav_menu([
+						'theme_location' => 'footer',
+						'items_wrap'     => '<ul class="inline">%3$s</ul>',
+						'fallback_cb'    => false,
+						'depth'          => 1,
+					]);
+				} ?>
 			</section>
 		</div>
 	</footer>

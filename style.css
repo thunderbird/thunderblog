@@ -258,6 +258,13 @@ footer .columns section ul li {
 	font-size: .9rem;
 	margin-bottom: .75rem;
 }
+footer .columns section ul li a {
+	text-decoration: none;
+	color: white;
+}
+footer .columns section ul li a:hover {
+	text-decoration: underline;
+}
 
 /* search form */
 aside.search-form {

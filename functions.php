@@ -14,7 +14,10 @@ add_theme_support( 'title-tag' );
 
 // navigation
 function register_menus() {
-  register_nav_menus(['primary' => __('Main Menu')]);
+  register_nav_menus([
+    'primary' => __('Main Menu'),
+    'footer'  => __('Footer Menu')
+  ]);
 }
 add_action('init', 'register_menus');
 
