@@ -21,7 +21,9 @@ get_header();
 	<article>
 		<div class="content">
 			<span class="category"><?php _e('Latest Article', 'thunderblog'); ?></span>
-			<h1><?= $post->post_title ?></h1>
+			<a class="title" href="<?= get_permalink($post); ?>">
+				<h1><?= $post->post_title ?></h1>
+			</a>
 			<div class="meta">
 				<time>
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-s" viewBox="0 0 24 24">
@@ -32,31 +34,35 @@ get_header();
 						<line x1="4" y1="11" x2="20" y2="11" />
 						<rect x="8" y="15" width="2" height="2" />
 					</svg>
-					<?= $post->post_date ?>
+					<?= date('F j, Y', strtotime($post->post_date)) ?>
 				</time>
-				<span class="author">
+				<a class="author" href="<?= get_author_posts_url($post->post_author) ?>">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-s" viewBox="0 0 24 24">
 						<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 						<circle cx="12" cy="7" r="4" />
 						<path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
 					</svg>
-					<?= $post->post_author ?>
-				</span>
-				<span class="responses">
+					<?= get_the_author_meta('user_firstname', $post->post_author) ?>
+					<?= get_the_author_meta('user_lastname', $post->post_author) ?>
+				</a>
+				<a class="responses" href="<?= rtrim(get_permalink($post), '/') . '#c'; ?>">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-s" viewBox="0 0 24 24">
 						<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 						<path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
 						<path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
 					</svg>
-					<?= $post->comment_count ?> <?php _e('responses', 'thunderblog'); ?>
-				</span>
+					<?= $post->comment_count ?>
+					<?php $post->comment_count == 1 ? _e('response', 'thunderblog') :  _e('responses', 'thunderblog'); ?>
+				</a>
 			</div>
-			<div class="description"><?= $post->post_excerpt ?></div>
-			<a class="btn btn-neutral-light" href="./article.html"><?php _e('Read more', 'thunderblog'); ?></a>
+			<div class="description"><?= get_the_excerpt($post) ?></div>
+			<a class="btn btn-neutral-light" href="<?= get_permalink($post); ?>"><?php _e('Read more', 'thunderblog'); ?></a>
 		</div>
-		<img class="show-xl" src="./thumb_00.png" alt="featured article title image">
+		<?php if (has_post_thumbnail($post)): ?>
+			<img class="show-xl" src="<?= get_the_post_thumbnail_url($post) ?>" alt="featured article title image">
 		<?php endif; ?>
 	</article>
+	<?php endif; ?>
 </section>
 <h2 class="text-center"><?php _e('Latest Posts', 'thunderblog'); ?></h2>
 <section class="articles">
@@ -66,14 +72,14 @@ if (have_posts()) {
 		the_post(); ?>
 		<article>
 			<?php if (has_post_thumbnail()): ?>
-				<div class="thumb" style="background-image: url(<?php get_the_post_thumbnail_url(); ?>);"></div>
+				<div class="thumb" style="background-image: url(<?= get_the_post_thumbnail_url(); ?>);"></div>
 			<?php endif; ?>
 			<?php the_category(); ?>
-			<a href="<?php wp_get_shortlink(the_ID()); ?>">
+			<a href="<?= get_permalink(); ?>">
 				<h3><?php the_title(); ?></h3>
 			</a>
 			<div class="summary"><?php the_excerpt(); ?></div>
-			<a class="btn btn-link" href="<?php wp_get_shortlink(the_ID()); ?>"><?php _e('Read more', 'thunderblog'); ?></a>
+			<a class="btn btn-link" href="<?= get_permalink(); ?>"><?php _e('Read more', 'thunderblog'); ?></a>
 		</article>
 		<?php
 	}

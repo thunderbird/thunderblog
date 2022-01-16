@@ -360,15 +360,26 @@ main > .featured article .category {
 	background: white;
 	color: var(--c-primary-dark-accent);
 }
+main > .featured article a.title {
+	color: white;
+	text-decoration: none;
+}
+main > .featured article a.title:hover {
+	text-decoration: underline;
+}
 main > .featured article .meta {
-	color: var(--c-primary-light);
 	display: flex;
 	gap: 1.5rem;
 }
 main > .featured article .meta > * {
+	color: var(--c-primary-light);
+	text-decoration: none;
 	display: flex;
 	align-items: center;
 	gap: 0.25rem;
+}
+main > .featured article .meta > a:hover {
+	text-decoration: underline;
 }
 main > .featured article .meta .icon {
 	stroke: var(--c-primary-light);
