@@ -55,3 +55,6 @@ add_action('widgets_init', 'thunderblog_register_footer_widgets', 20);
 
 // load styles
 wp_enqueue_style('style', get_stylesheet_uri());
+
+// load scripts
+wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/main.js', [], 1.0, true);
