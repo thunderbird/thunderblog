@@ -13,7 +13,7 @@
 <?= get_header(); ?>
 <main>
 	<h2 class="text-center">
-		<?= _e('Posts written by ', 'thunderblog') ?>
+		<?= _e('Posts by', 'thunderblog') ?>
 		<?= get_the_author() ?>
 	</h2>
 	<section class="articles">
