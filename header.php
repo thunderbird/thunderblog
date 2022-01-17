@@ -11,17 +11,17 @@
 
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?= language_attributes() ?>>
 <head>
-	<meta charset="<?php bloginfo('charset'); ?>" />
+	<meta charset="<?= bloginfo('charset') ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<?php wp_head(); ?>
+	<?= wp_head() ?>
 </head>
 <body>
 	<header>
-		<?php get_template_part('parts/logo'); ?>
+		<?= get_template_part('parts/logo') ?>
 		<nav class="show-xl">
-			<?php get_template_part('parts/nav') ?>
+			<?= get_template_part('parts/nav') ?>
 		</nav>
 		<div class="search ml-auto" id="search">
 			<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
@@ -32,7 +32,7 @@
 		</div>
 		<div class="actions show-m">
 			<a class="btn btn-primary" href="https://www.thunderbird.net/download/" target="_blank">
-				<span class="show-l"><?php _e('Download', 'thunderblog'); ?><span class="show-xxl"> Thunderbird</span></span>
+				<span class="show-l"><?= _e('Download', 'thunderblog') ?><span class="show-xxl"> Thunderbird</span></span>
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon hide-l" viewBox="0 0 24 24">
 					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 					<path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
@@ -41,7 +41,7 @@
 				</svg>
 			</a>
 			<a class="btn btn-love" href="https://give.thunderbird.net" target="_blank">
-				<span class="show-l"><?php _e('Donate', 'thunderblog'); ?></span>
+				<span class="show-l"><?= _e('Donate', 'thunderblog') ?></span>
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon hide-l" viewBox="0 0 24 24">
 					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 					<path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
@@ -62,12 +62,18 @@
 			</svg>
 		</div>
 	</header>
-	<aside class="search-form" id="search-form">
-		<input type="search" name="search" placeholder="<?php _e('Search&hellip;', 'thunderblog'); ?>" />
-		<button type="submit" class="btn btn-neutral"><?php _e('Search', 'thunderblog'); ?></button>
-	</aside>
+	<form
+		role="search"
+		class="search-form <?= get_search_query() ? 'active' : '' ?>"
+		id="search-form"
+		method="get"
+		action="<?= esc_url(home_url('/')) ?>"
+	>
+		<input type="search" value="<?= get_search_query() ?>" name="s" placeholder="<?= _e('Search&hellip;', 'thunderblog') ?>" required />
+		<button type="submit" class="btn btn-neutral"><?= _e('Search', 'thunderblog') ?></button>
+	</form>
 	<nav id="mobile" class="mobile-nav">
-		<?php get_template_part('parts/nav') ?>
+		<?= get_template_part('parts/nav') ?>
 		<div class="actions hide-m">
 			<a class="btn btn-primary btn-icon" href="https://www.thunderbird.net/download/" target="_blank">
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
@@ -76,14 +82,14 @@
 					<polyline points="7 11 12 16 17 11" />
 					<line x1="12" y1="4" x2="12" y2="16" />
 				</svg>
-				<span><?php _e('Download', 'thunderblog'); ?> Thunderbird</span>
+				<span><?= _e('Download', 'thunderblog') ?> Thunderbird</span>
 			</a>
 			<a class="btn btn-love btn-icon" href="https://give.thunderbird.net" target="_blank">
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
 					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 					<path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
 				</svg>
-				<span><?php _e('Donate', 'thunderblog'); ?></span>
+				<span><?= _e('Donate', 'thunderblog') ?></span>
 			</a>
 		</div>
 	</nav>
