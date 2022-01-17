@@ -26,6 +26,7 @@
 	<section class="articles">
 		<?= get_template_part('parts/post-list') ?>
 	</section>
+	<?= get_template_part('parts/post-pagination') ?>
 </main>
 
 <?= get_footer() ?>

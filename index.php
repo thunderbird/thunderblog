@@ -39,6 +39,7 @@
 	<section class="articles">
 		<?php get_template_part('parts/post-list') ?>
 	</section>
+	<?= get_template_part('parts/post-pagination') ?>
 </main>
 
 <?= get_footer() ?>
