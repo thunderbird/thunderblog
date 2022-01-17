@@ -70,7 +70,7 @@ function thunderblog_comment($comment, $args, $depth) { ?>
 					printf(__('%1$s at %2$s'), get_comment_date(), get_comment_time()); ?>
 				</a>
 			</time>
-			<span class="float-right"><?= edit_comment_link(__('Edit', 'thunderblog')) ?></span>
+			<span class="ml-auto"><?= edit_comment_link(__('Edit', 'thunderblog')) ?></span>
 		</h3>
 		<blockquote>
 			<?php if ($comment->comment_approved == '0'): ?>
