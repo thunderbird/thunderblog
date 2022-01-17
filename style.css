@@ -216,6 +216,9 @@ header .mobile-menu.active .icon.open,
 header .mobile-menu .icon.close {
 	display: none;
 }
+main {
+	min-height: 40vh;
+}
 footer {
 	background: black;
 	color: white;
@@ -340,7 +343,7 @@ nav.mobile-nav .actions {
 	padding: 0 3rem;
 }
 
-/* landing page content */
+/* featured content */
 main > .featured {
 	background: linear-gradient(135deg, var(--c-primary-dark-accent) 0%, var(--c-primary-dark) 100%);
 	display: flex;

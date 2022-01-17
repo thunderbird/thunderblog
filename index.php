@@ -20,7 +20,7 @@ get_header();
 	<?php if ($post): ?>
 	<article>
 		<div class="content">
-			<span class="category"><?php _e('Latest Article', 'thunderblog'); ?></span>
+			<span class="category"><?php _e('Latest Post', 'thunderblog'); ?></span>
 			<a class="title" href="<?= get_permalink($post); ?>">
 				<h1><?= $post->post_title ?></h1>
 			</a>
