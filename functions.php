@@ -12,7 +12,7 @@ add_theme_support('post-thumbnails');
 // enable Wordpress generated titles
 add_theme_support('title-tag');
 
-// navigation
+// navigation menus for top and footer menu
 function thunderblog_register_menus() {
   register_nav_menus([
     'primary' => __('Main Menu'),
@@ -21,7 +21,7 @@ function thunderblog_register_menus() {
 }
 add_action('init', 'thunderblog_register_menus');
 
-// widgets
+// footer widgets for three columns
 function thunderblog_register_footer_widgets() {
 	register_sidebar([
 		'name'          => __('Footer Column 1', 'thunderblog'),
@@ -52,6 +52,40 @@ function thunderblog_register_footer_widgets() {
 	]);
 }
 add_action('widgets_init', 'thunderblog_register_footer_widgets', 20);
+
+// custom comment template
+function thunderblog_comment($comment, $args, $depth) { ?>
+	<div class="comment" id="comment-<?= comment_ID() ?>">
+		<div class="avatar">
+			<?php if ($args['avatar_size'] != 0): ?>
+				<?= get_avatar($comment, $args['avatar_size']) ?>
+			<?php endif; ?>
+		</div>
+		<h3 class="comment-meta">
+			<cite><?= get_comment_author() ?></cite>
+			<?= _e('wrote on', 'thunderblog') ?>
+			<time>
+				<a href="<?= htmlspecialchars(get_comment_link($comment->comment_ID)) ?>"><?php
+					/* translators: 1: date, 2: time */
+					printf(__('%1$s at %2$s'), get_comment_date(), get_comment_time()); ?>
+				</a>
+			</time>
+			<span class="float-right"><?= edit_comment_link(__('Edit', 'thunderblog')) ?></span>
+		</h3>
+		<blockquote>
+			<?php if ($comment->comment_approved == '0'): ?>
+				<em><?= _e('Your comment is awaiting moderation.', 'thunderblog') ?></em>
+			<?php endif; ?>
+			<?= comment_text() ?>
+			<?= comment_reply_link(array_merge(
+				$args, 
+				[ 
+					'depth'     => $depth, 
+					'max_depth' => $args['max_depth'] 
+				]
+			)) ?>
+		</blockquote><?php
+}
 
 // load styles
 wp_enqueue_style('style', get_stylesheet_uri());

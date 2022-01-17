@@ -78,8 +78,25 @@ a {
 a:hover {
 	color: var(--c-primary-accent);
 }
-input {
+input,
+textarea {
+	padding: .25rem 1rem;
+	font-size: 1rem;
+	border: 2px solid var(--c-neutral-light-accent);
 	transition: background .2s, border .2s, box-shadow .2s, color .2s, -webkit-box-shadow .2s;
+}
+input[type=text] {
+	min-height: 2rem;
+}
+input:hover,
+textarea:hover {
+	border-color: var(--c-neutral-accent);
+}
+input:focus,
+textarea:focus {
+	border-color: var(--c-neutral-accent);
+	box-shadow: 0 0 0 .2rem rgba(0,0,0,.2);
+	border-radius: 0;
 }
 .btn {
 	border-radius: var(--border-radius);
@@ -292,16 +309,8 @@ form.search-form.active {
 	margin-top: 0;
 }
 form.search-form input {
-	padding: .25rem 1rem;
-	font-size: 1rem;
 	width: 100%;
 	max-width: 500px;
-	border: 2px solid var(--c-neutral-light-accent);
-}
-form.search-form input:focus {
-	border-color: var(--c-neutral-accent);
-	box-shadow: 0 0 0 .2rem rgba(0,0,0,.2);
-	border-radius: 0;
 }
 
 /* mobile navigation */
@@ -537,14 +546,26 @@ main.post .comments .comment > blockquote {
 	margin: 0;
 	grid-area: quote;
 }
-main.post .comments .comment > .replies {
-	grid-area: replies;
+main.post .comments .comment > blockquote p {
+	margin: 0;
 }
-main.post .comments .comment > .replies > .comment {
+main.post .comments .comment > .comment {
+	grid-area: replies;
 	margin: 1rem 0 0 2.5rem;
+}
+main.post .comments .comment > .comment > .comment > .comment {
+	margin: 0;
 }
 main.post .comments > .comment ~ .comment {
 	margin-top: 3rem;
+}
+main.post .comments .comment-respond {
+	margin-top: 3rem;
+}
+main.post .comments .comment-form > p:not(:first-child):not(:last-child):not(.comment-form-cookies-consent):not(.form-submit) {
+	display: flex;
+	flex-direction: column;
+	gap: .25rem;
 }
 
 /* responsivness */
@@ -607,4 +628,7 @@ main.post .comments > .comment ~ .comment {
 }
 .ml-auto {
 	margin-left: auto;
+}
+.float-right {
+	float: right;
 }
