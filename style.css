@@ -346,7 +346,6 @@ main > .featured {
 	display: flex;
 	height: var(--featured-height);
 	justify-content: center;
-	margin-bottom: 3rem;
 	padding: 0 1rem;
 }
 main > .featured article {
@@ -393,6 +392,9 @@ main > .featured article .meta .icon {
 }
 main > .featured article .description {
 	margin: 2rem 0 3rem 0;
+}
+main > h2 {
+	margin-top: 3rem;
 }
 main > .articles {
 	display: grid;
