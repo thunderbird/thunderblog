@@ -34,7 +34,7 @@
 					<?= get_comments_number() ?>
 					<?= get_comments_number() == 1 ? _e('response', 'thunderblog') :  _e('responses', 'thunderblog') ?>
 				</h2>
-				<?php if ( comments_open() || get_comments_number() ) comments_template(); ?>
+				<?php if (comments_open() || get_comments_number()) comments_template(); ?>
 			</section>
 			<?php
 		}
