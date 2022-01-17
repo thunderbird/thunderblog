@@ -1,8 +1,8 @@
 <?php
 /**
- * The category template file
+ * The tag template file
  *
- * lists all posts in requested category
+ * lists all posts tagged with requested tag
  *
  * @package WordPress
  * @subpackage Thunderblog
@@ -13,8 +13,8 @@
 <?= get_header(); ?>
 <main>
 	<h2 class="text-center">
-		<?= _e('Posts in', 'thunderblog') ?>
-		<?= '&laquo;' ?><?= single_cat_title() ?><?= '&raquo;' ?>
+		<?= _e('Posts tagged with', 'thunderblog') ?>
+		<?= '&laquo;' ?><?= single_tag_title() ?><?= '&raquo;' ?>
 	</h2>
 	<section class="articles">
 		<?= get_template_part('parts/post-list'); ?>
