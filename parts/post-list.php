@@ -9,13 +9,13 @@ if (have_posts()) {
 			<?php endif; ?>
 			<?php the_category(); ?>
 			<a href="<?= get_permalink(); ?>">
-				<h3><?php the_title(); ?></h3>
+				<h3><?= the_title(); ?></h3>
 			</a>
-			<div class="summary"><?php the_excerpt(); ?></div>
-			<a class="btn btn-link" href="<?= get_permalink(); ?>"><?php _e('Read more', 'thunderblog'); ?></a>
+			<div class="summary"><?= the_excerpt(); ?></div>
+			<a class="btn btn-link" href="<?= get_permalink(); ?>"><?= _e('Read more', 'thunderblog'); ?></a>
 		</article>
 		<?php
 	}
 } else {
-	echo 'No posts available';
+	_e('No posts available.', 'thunderblog');
 }

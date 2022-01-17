@@ -119,6 +119,12 @@ input {
 	align-items: center;
 	gap: 0.5rem;
 }
+.post-categories {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: .5rem;
+}
 .category,
 .post-categories > li {
 	border-radius: var(--border-radius);
@@ -425,12 +431,6 @@ main > .articles article > a:not(.btn) {
 main > .articles article > a:not(.btn):hover {
 	text-decoration: underline;
 }
-main > .articles article .post-categories {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	gap: .5rem;
-}
 main > .articles article .post-categories > li {
 	background:  var(--c-primary-dark-accent);
 }
@@ -462,6 +462,9 @@ main.post .comments {
 }
 main.post .content .post-categories > li {
 	background:  var(--c-primary-dark-accent);
+}
+main.post .content .post-categories > li a {
+	text-decoration: none;
 	color: white;
 }
 main.post .content .meta {
@@ -470,6 +473,7 @@ main.post .content .meta {
 	gap: 1.5rem;
 }
 main.post .content .meta > * {
+	color: var(--c-primary-dark-accent);
 	display: flex;
 	align-items: center;
 	gap: 0.25rem;
