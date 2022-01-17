@@ -1,3 +1,13 @@
+<?php
+/**
+ * Displays share buttons for social networks (Twitter, LinkedIn) for a post.
+ *
+ * @package WordPress
+ * @subpackage Thunderblog
+ * @since 0.0.1
+ */
+?>
+
 <section class="social" id="c">
 	<a href="https://twitter.com/intent/tweet?original_referer=<?= urlencode(get_site_url()) ?>&text=<?= urlencode(the_title()) ?>&url=<?= urlencode(get_permalink()) ?>&via=mozthunderbird" class="social-twitter" target="_blank">
 		<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">

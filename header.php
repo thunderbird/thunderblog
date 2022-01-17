@@ -8,16 +8,16 @@
  * @subpackage Thunderblog
  * @since 0.0.1
  */
-
 ?>
+
 <!DOCTYPE html>
 <html <?= language_attributes() ?>>
 <head>
 	<meta charset="<?= bloginfo('charset') ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="<?= esc_url(get_template_directory_uri()); ?>/assets/ios-icon-180.png">
-	<link rel="icon" type="image/png" sizes="196x196" href="<?= esc_url(get_template_directory_uri()); ?>/assets/favicon-196.png">
-	<link rel="shortcut icon" href="<?= esc_url(get_template_directory_uri()); ?>/assets/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="<?= esc_url(get_template_directory_uri()) ?>/assets/ios-icon-180.png" />
+	<link rel="icon" type="image/png" sizes="196x196" href="<?= esc_url(get_template_directory_uri()) ?>/assets/favicon-196.png" />
+	<link rel="shortcut icon" href="<?= esc_url(get_template_directory_uri()) ?>/assets/favicon.ico" />
 	<?= wp_head() ?>
 </head>
 <body>

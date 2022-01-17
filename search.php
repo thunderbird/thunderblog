@@ -10,7 +10,8 @@
  */
 ?>
 
-<?= get_header(); ?>
+<?= get_header() ?>
+
 <main>
 	<h2 class="text-center">
 		<?php
@@ -23,7 +24,8 @@
 		<?= '&laquo;' ?><?= get_search_query() ?><?= '&raquo;' ?>
 	</h2>
 	<section class="articles">
-		<?= get_template_part('parts/post-list'); ?>
+		<?= get_template_part('parts/post-list') ?>
 	</section>
 </main>
-<?= get_footer(); ?>
+
+<?= get_footer() ?>

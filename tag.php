@@ -10,14 +10,16 @@
  */
 ?>
 
-<?= get_header(); ?>
+<?= get_header() ?>
+
 <main>
 	<h2 class="text-center">
 		<?= _e('Posts tagged with', 'thunderblog') ?>
 		<?= '&laquo;' ?><?= single_tag_title() ?><?= '&raquo;' ?>
 	</h2>
 	<section class="articles">
-		<?= get_template_part('parts/post-list'); ?>
+		<?= get_template_part('parts/post-list') ?>
 	</section>
 </main>
-<?= get_footer(); ?>
+
+<?= get_footer() ?>

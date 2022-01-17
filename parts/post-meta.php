@@ -1,3 +1,13 @@
+<?php
+/**
+ * Displays meta data (date, author, number of responses) for a post.
+ *
+ * @package WordPress
+ * @subpackage Thunderblog
+ * @since 0.0.1
+ */
+?>
+
 <div class="meta">
 	<time>
 		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-s" viewBox="0 0 24 24">
