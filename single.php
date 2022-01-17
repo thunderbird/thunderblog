@@ -26,6 +26,7 @@
 				<h1><?= the_title() ?></h1>
 				<?= get_template_part('parts/post-meta') ?>
 				<?= get_the_content() ?>
+				<?= get_template_part('parts/post-tags') ?>
 			</section>
 			<?= get_template_part('parts/post-social') ?>
 			<section class="comments">

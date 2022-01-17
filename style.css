@@ -27,7 +27,7 @@ Tags: one-column, accessibility-ready, custom-menu, featured-images, footer-widg
 	--c-love-accent: #b92f51;
 	--c-neutral: #45454b;
 	--c-neutral-accent: #34343a;
-	--c-neutral-light: #ffffff;
+	--c-neutral-light: #ececf7;
 	--c-neutral-light-accent: #cacad8;
 	--c-twitter: #1d9bf0;
 	--c-linkedin: #0a66c2;
@@ -143,6 +143,7 @@ textarea:focus {
 	gap: .5rem;
 }
 .category,
+.tag,
 .post-categories > li {
 	border-radius: var(--border-radius);
 	display: inline-block;
@@ -152,7 +153,7 @@ textarea:focus {
 	text-transform: uppercase;
 }
 .icon {
-	stroke: var(--c-neutral-light);
+	stroke: white;
 	stroke-width: 1.5;
 	stroke-linecap: round;
 	stroke-linejoin: round;
@@ -503,6 +504,17 @@ main.post .content figure img {
 }
 main.post .content figure figcaption {
 	text-align: center;
+}
+main.post .tags {
+	display: flex;
+	gap: .5rem;
+	flex-wrap: wrap;
+	margin-top: 3rem;
+}
+main.post .tags .tag {
+	background: var(--c-neutral-light);
+	color: black;
+	text-decoration: none;
 }
 main.post .social {
 	margin: 4rem 0 0 0;
