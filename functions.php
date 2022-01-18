@@ -87,6 +87,25 @@ function thunderblog_comment($comment, $args, $depth) { ?>
 		</blockquote><?php
 }
 
+// customize customizer to add theme options
+function thunderblog_customize_register($wp_customize) {
+	// custom download link
+	$wp_customize->add_setting('download_url');
+	$wp_customize->add_control('download_url', [
+		'label' => __( 'Download URL' ),
+		'type' => 'url',
+		'section' => 'title_tagline',
+	]);
+	// custom donation link
+	$wp_customize->add_setting('donation_url');
+	$wp_customize->add_control('donation_url', [
+		'label' => __( 'Donation URL' ),
+		'type' => 'url',
+		'section' => 'title_tagline',
+	]);
+}
+add_action('customize_register', 'thunderblog_customize_register');
+
 // load styles
 wp_enqueue_style('style', get_stylesheet_uri());
 

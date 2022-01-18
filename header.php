@@ -34,7 +34,8 @@
 			</svg>
 		</div>
 		<div class="actions show-m">
-			<a class="btn btn-primary" href="https://www.thunderbird.net/download/" target="_blank">
+			<?php if (get_theme_mod('download_url')): ?>
+			<a class="btn btn-primary" href="<?= get_theme_mod('download_url') ?>" target="_blank">
 				<span class="show-l"><?= _e('Download', 'thunderblog') ?><span class="show-xxl"> Thunderbird</span></span>
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon hide-l" viewBox="0 0 24 24">
 					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -43,13 +44,16 @@
 					<line x1="12" y1="4" x2="12" y2="16" />
 				</svg>
 			</a>
-			<a class="btn btn-love" href="https://give.thunderbird.net" target="_blank">
+			<?php endif; ?>
+			<?php if (get_theme_mod('donation_url')): ?>
+			<a class="btn btn-love" href="<?= get_theme_mod('donation_url') ?>" target="_blank">
 				<span class="show-l"><?= _e('Donate', 'thunderblog') ?></span>
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon hide-l" viewBox="0 0 24 24">
 					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 					<path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
 				</svg>
 			</a>
+			<?php endif; ?>
 		</div>
 		<div class="mobile-menu hide-xl" id="mobile-menu">
 			<svg xmlns="http://www.w3.org/2000/svg" class="icon open" viewBox="0 0 24 24">

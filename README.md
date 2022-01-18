@@ -8,6 +8,7 @@ This theme works out of the box with a standard Wordpress installation. However 
 
 - Posts are shown in a three-column grid on large viewports. So having a multiple of 3 posts per page is optimal to fill all available space (Settings > Reading > Blog pages show at most: e.g. 15)
 - Posts do not need to have a title image, but it looks better, if every post has one in post lists (edit post > Post > Featured image)
+- You can activate a download and a donation button in the top menu bar by adding Download URL and Donation URL (Theme > Customizer > Site Identity)
 
 ## Blocks
 
