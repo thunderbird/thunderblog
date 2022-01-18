@@ -7,7 +7,7 @@ Author: Andreas Müller
 Author URI: https://devmount.de
 Description: Thunderblog is a simple, responsive, mobile-first Wordpress theme for the blog of the Thunderbird email client.
 Requires at least: 5.8
-Tested up to: 5.9
+Tested up to: 5.8
 Requires PHP: 7.4
 Version: 0.0.1
 License: MIT
@@ -98,30 +98,36 @@ textarea:focus {
 	box-shadow: 0 0 0 .2rem rgba(0,0,0,.2);
 	border-radius: 0;
 }
-.btn {
+.btn,
+.wp-block-button>a {
 	border-radius: var(--border-radius);
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 	font-weight: 600;
-	padding: .75rem 1.25rem;
+	padding: .75rem 1.25rem !important;
 	text-decoration: none;
 	text-transform: uppercase;
 	display: inline-block;
 	border: none;
 	cursor: pointer;
 }
-.btn.btn-primary {
+.btn.btn-primary,
+.wp-block-button.primary>a {
 	background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-primary-accent) 100%);
 	color: white;
 }
-.btn.btn-love {
+.btn.btn-love,
+.wp-block-button.love>a {
 	background: linear-gradient(135deg, #f23d5c 0%, #b92f51 100%);
 	color: white;
 }
-.btn.btn-neutral {
+.btn.btn-neutral,
+.wp-block-button.neutral>a {
 	background: linear-gradient(135deg, var(--c-neutral) 0%, var(--c-neutral-accent) 100%);
 	color: white;
 }
-.btn.btn-neutral-light {
+.btn.btn-neutral-light,
+.wp-block-button.neutral-light>a {
+	color: black;
 	background: linear-gradient(135deg, var(--c-neutral-light) 0%, var(--c-neutral-light-accent) 100%);
 }
 .btn.btn-link {
