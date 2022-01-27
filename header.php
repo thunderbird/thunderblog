@@ -26,13 +26,13 @@
 		<nav class="show-xl">
 			<?= get_template_part('parts/nav') ?>
 		</nav>
-		<div class="search ml-auto" id="search">
+		<button class="btn btn-icon btn-flat search ml-auto" id="search">
 			<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
 				<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 				<circle cx="10" cy="10" r="7" />
 				<line x1="21" y1="21" x2="15" y2="15" />
 			</svg>
-		</div>
+		</button>
 		<div class="actions show-m">
 			<?php if (get_theme_mod('download_url')): ?>
 			<a class="btn btn-primary" href="<?= get_theme_mod('download_url') ?>" target="_blank">
