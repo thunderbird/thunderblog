@@ -131,7 +131,7 @@ textarea:focus {
 	background: linear-gradient(135deg, var(--c-neutral-light) 0%, var(--c-neutral-light-accent) 100%);
 }
 .btn.btn-link {
-	padding: .25rem 0;
+	padding: .25rem 0 !important;
 	color: var(--c-neutral-accent);
 	text-transform: initial;
 	box-shadow: none;
