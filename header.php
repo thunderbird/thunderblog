@@ -23,7 +23,7 @@
 <body>
 	<header>
 		<?= get_template_part('parts/logo') ?>
-		<nav class="show-xl">
+		<nav class="d-init-xl">
 			<?= get_template_part('parts/nav') ?>
 		</nav>
 		<button class="btn btn-icon btn-flat search ml-auto" id="search">
@@ -33,11 +33,11 @@
 				<line x1="21" y1="21" x2="15" y2="15" />
 			</svg>
 		</button>
-		<div class="actions show-m">
+		<div class="actions d-flex-m">
 			<?php if (get_theme_mod('download_url')): ?>
 			<a class="btn btn-primary" href="<?= get_theme_mod('download_url') ?>" target="_blank">
-				<span class="show-l"><?= _e('Download', 'thunderblog') ?><span class="show-xxl"> Thunderbird</span></span>
-				<svg xmlns="http://www.w3.org/2000/svg" class="icon hide-l" viewBox="0 0 24 24">
+				<span class="d-flex-l gap-05"><?= _e('Download', 'thunderblog') ?><span class="d-init-xxl">Thunderbird</span></span>
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon d-none-l" viewBox="0 0 24 24">
 					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 					<path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
 					<polyline points="7 11 12 16 17 11" />
@@ -47,15 +47,15 @@
 			<?php endif; ?>
 			<?php if (get_theme_mod('donation_url')): ?>
 			<a class="btn btn-love" href="<?= get_theme_mod('donation_url') ?>" target="_blank">
-				<span class="show-l"><?= _e('Donate', 'thunderblog') ?></span>
-				<svg xmlns="http://www.w3.org/2000/svg" class="icon hide-l" viewBox="0 0 24 24">
+				<span class="d-flex-l"><?= _e('Donate', 'thunderblog') ?></span>
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon d-none-l" viewBox="0 0 24 24">
 					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 					<path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
 				</svg>
 			</a>
 			<?php endif; ?>
 		</div>
-		<div class="mobile-menu hide-xl" id="mobile-menu">
+		<div class="mobile-menu d-none-xl" id="mobile-menu">
 			<svg xmlns="http://www.w3.org/2000/svg" class="icon open" viewBox="0 0 24 24">
 				<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 				<line x1="4" y1="6" x2="20" y2="6" />
@@ -81,7 +81,7 @@
 	</form>
 	<nav id="mobile" class="mobile-nav">
 		<?= get_template_part('parts/nav') ?>
-		<div class="actions hide-m">
+		<div class="actions d-none-m">
 			<a class="btn btn-primary btn-icon" href="https://www.thunderbird.net/download/" target="_blank">
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
 					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
