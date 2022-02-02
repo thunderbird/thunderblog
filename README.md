@@ -2,6 +2,8 @@
 
 This is a simple, responsive, mobile-first Wordpress theme for the blog of the Thunderbird email client.
 
+<img src="./screenshot.png" width="50%" alt="Screenshot of the Thunderblog theme" />
+
 ## Recommended settings
 
 This theme works out of the box with a vanilla Wordpress installation. However the following settings are recommended for an optimal experience:
