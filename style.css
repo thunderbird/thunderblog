@@ -218,17 +218,6 @@ header .actions {
 	display: flex;
 	gap: .5rem;
 }
-header .actions .btn {
-	position: relative;
-	min-width: 1rem;
-	min-height: 1.5rem;
-}
-header .actions .btn .icon {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
 header .mobile-menu {
 	display: flex;
 	cursor: pointer;
