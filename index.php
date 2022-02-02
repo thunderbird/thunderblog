@@ -30,7 +30,7 @@
 					<a class="btn btn-neutral-light" href="<?= get_permalink($post) ?>"><?= _e('Read more', 'thunderblog') ?></a>
 				</div>
 				<?php if (has_post_thumbnail($post)): ?>
-					<img class="show-xl" src="<?= get_the_post_thumbnail_url($post) ?>" alt="featured article title image">
+					<img class="d-init-xl" src="<?= get_the_post_thumbnail_url($post) ?>" alt="featured article title image">
 				<?php endif; ?>
 			</article>
 		<?php endif; ?>
