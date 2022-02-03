@@ -542,37 +542,31 @@ main.post .comments h2 {
 	margin: 2rem 0;
 }
 main.post .comments .comment {
-	display: grid;
-	grid-template: 
-		"avatar  meta"    auto
-		"avatar  quote"   auto
-		"replies replies" auto / 64px auto;
-	gap: 1rem;
+	position: relative;
+	margin-left: 74px;
 }
 main.post .comments .comment > .avatar {
-	grid-area: avatar;
+	position: absolute;
+	left: -74px;
 }
 main.post .comments .comment > h3 {
 	font-size: 1rem;
-	margin: 0;
-	grid-area: meta;
+	margin: 0 0 1rem 0;
 	display: flex;
 	gap: .5rem;
 	flex-wrap: wrap;
 }
 main.post .comments .comment > blockquote {
 	margin: 0;
-	grid-area: quote;
 }
 main.post .comments .comment > blockquote p {
 	margin: 0;
 }
 main.post .comments .comment > .comment {
-	grid-area: replies;
-	margin: 1rem 0 0 2.5rem;
+	margin: 1.5rem 0 0 2.5rem;
 }
-main.post .comments .comment > .comment > .comment > .comment {
-	margin: 0;
+main.post .comments .comment > .comment > .comment .comment {
+	margin-left: 0;
 }
 main.post .comments > .comment ~ .comment {
 	margin-top: 3rem;
