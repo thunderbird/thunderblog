@@ -107,6 +107,7 @@ function thunderblog_customize_register($wp_customize) {
 add_action('customize_register', 'thunderblog_customize_register');
 
 // load styles
+wp_enqueue_style('normalize', get_template_directory_uri() . '/assets/normalize.css');
 wp_enqueue_style('style', get_stylesheet_uri());
 
 // load scripts
