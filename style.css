@@ -359,7 +359,7 @@ nav.mobile-nav .actions {
 main > .featured {
 	background: linear-gradient(135deg, var(--c-primary-dark-accent) 0%, var(--c-primary-dark) 100%);
 	display: flex;
-	height: var(--featured-height);
+	min-height: var(--featured-height);
 	justify-content: center;
 	padding: 0 1rem;
 }
