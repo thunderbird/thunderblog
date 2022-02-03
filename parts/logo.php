@@ -8,6 +8,7 @@
  */
 
 ?>
-<a class="logo" href="<?= site_url() ?>">
-	<img src="<?= esc_url(get_template_directory_uri()); ?>/assets/thunderbird_logo.svg" alt="Logo" />
+
+<a class="logo" href="<?php echo site_url(); ?>">
+	<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/thunderbird_logo.svg" alt="Logo" />
 </a>

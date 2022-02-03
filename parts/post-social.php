@@ -10,11 +10,11 @@
 
 <section class="social" id="c">
 	<a
-		href="https://twitter.com/intent/tweet?original_referer=<?= urlencode(get_site_url()) ?>&text=<?= urlencode(the_title()) ?>&url=<?= urlencode(get_permalink()) ?>&via=mozthunderbird"
+		href="https://twitter.com/intent/tweet?original_referer=<?php echo urlencode( get_site_url() ); ?>&text=<?php echo urlencode( get_the_title() ); ?>&url=<?php echo urlencode(get_permalink()) ?>&via=mozthunderbird"
 		class="social-twitter"
 		target="_blank"
-		title="<?= _e('Share this article on Twitter', 'thunderblog') ?>"
-		aria-label="<?= _e('Share this article on Twitter', 'thunderblog') ?>"
+		title="<?php _e( 'Share this article on Twitter', 'thunderblog' ); ?>"
+		aria-label="<?php _e( 'Share this article on Twitter', 'thunderblog' ); ?>"
 	>
 		<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
 			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -22,11 +22,11 @@
 		</svg>
 	</a>
 	<a
-		href="https://www.linkedin.com/sharing/share-offsite/?url=<?= urlencode(get_permalink()) ?>"
+		href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo urlencode( get_permalink() ); ?>"
 		class="social-linkedin"
 		target="_blank"
-		title="<?= _e('Share this article on LinkedIn', 'thunderblog') ?>"
-		aria-label="<?= _e('Share this article on LinkedIn', 'thunderblog') ?>"
+		title="<?php _e( 'Share this article on LinkedIn', 'thunderblog' ); ?>"
+		aria-label="<?php _e( 'Share this article on LinkedIn', 'thunderblog' ); ?>"
 	>
 		<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
 			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>

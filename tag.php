@@ -10,17 +10,17 @@
  */
 ?>
 
-<?= get_header() ?>
+<?php get_header(); ?>
 
 <main>
 	<h2 class="text-center">
-		<?= _e('Posts tagged with', 'thunderblog') ?>
-		<?= '&laquo;' ?><?= single_tag_title() ?><?= '&raquo;' ?>
+		<?php _e( 'Posts in', 'thunderblog' ); ?>
+		&laquo;<?php single_tag_title(); ?>&raquo;
 	</h2>
 	<section class="articles">
-		<?= get_template_part('parts/post-list') ?>
+		<?php get_template_part( 'parts/post-list' ); ?>
 	</section>
-	<?= get_template_part('parts/post-pagination') ?>
+	<?php get_template_part( 'parts/post-pagination' ); ?>
 </main>
 
-<?= get_footer() ?>
+<?php get_footer(); ?>

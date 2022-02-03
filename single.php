@@ -10,37 +10,42 @@
  */
 ?>
 
-<?= get_header() ?>
+<?php get_header(); ?>
 
 <main class="post">
 	<?php
 	// iterate over all available posts
-	if (have_posts()) {
-		while (have_posts()) {
-			the_post(); ?>
-			<?php if (has_post_thumbnail()): ?>
-				<img class="title-image" src="<?= get_the_post_thumbnail_url() ?>" alt="featured post title image">
+	if ( have_posts() ) {
+		while ( have_posts() ) {
+			the_post();
+			?>
+			<?php if ( has_post_thumbnail() ) : ?>
+				<img class="title-image" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="featured post title image">
 			<?php endif; ?>
 			<section class="content">
-				<?= the_category() ?>
-				<h1><?= the_title() ?></h1>
-				<?= get_template_part('parts/post-meta') ?>
-				<?= get_the_content() ?>
-				<?= get_template_part('parts/post-tags') ?>
+				<?php the_category(); ?>
+				<?php the_title( '<h1>', '</h1>' ); ?>
+				<?php get_template_part('parts/post-meta'); ?>
+				<?php the_content(); ?>
+				<?php get_template_part('parts/post-tags'); ?>
 			</section>
-			<?= get_template_part('parts/post-social') ?>
+			<?php get_template_part('parts/post-social'); ?>
 			<section class="comments">
 				<h2>
-					<?= get_comments_number() ?>
-					<?= get_comments_number() == 1 ? _e('response', 'thunderblog') :  _e('responses', 'thunderblog') ?>
+					<?php echo get_comments_number(); ?>
+					<?php echo get_comments_number() === 1 ? _e( 'response', 'thunderblog' ) : _e( 'responses', 'thunderblog' ); ?>
 				</h2>
-				<?php if (comments_open() || get_comments_number()) comments_template(); ?>
+				<?php
+					if ( comments_open() || get_comments_number() ) {
+						comments_template();
+					}
+					?>
 			</section>
 			<?php
 		}
 	} else {
-		_e('The post is not available.', 'thunderblog');
+		_e( 'The post is not available.', 'thunderblog' );
 	} ?>
 </main>
 
-<?= get_footer() ?>
+<?php get_footer(); ?>

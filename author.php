@@ -10,17 +10,17 @@
  */
 ?>
 
-<?= get_header() ?>
+<?php get_header(); ?>
 
 <main>
 	<h2 class="text-center">
-		<?= _e('Posts by', 'thunderblog') ?>
-		<?= get_the_author() ?>
+		<?php _e( 'Posts by', 'thunderblog' ); ?>
+		<?php the_author(); ?>
 	</h2>
 	<section class="articles">
-		<?= get_template_part('parts/post-list') ?>
+		<?php get_template_part( 'parts/post-list' ); ?>
 	</section>
-	<?= get_template_part('parts/post-pagination') ?>
+	<?php get_template_part( 'parts/post-pagination' ); ?>
 </main>
 
-<?= get_footer() ?>
+<?php get_footer(); ?>
