@@ -15,21 +15,30 @@
  * the visitor has not yet entered the password,
  * return early without loading the comments.
  */
-if (post_password_required()) return;
+if ( post_password_required() ) {
+	return;
+}
 
-if (have_comments()): ?>
-	<?= wp_list_comments([
-		'style'       => 'div',
-		'avatar_size' => 64,
-		'short_ping'  => true,
-		'callback'    => 'thunderblog_comment'
-	]) ?>
+if ( have_comments() ) :
+	echo wp_list_comments(
+		array(
+			'style'       => 'div',
+			'avatar_size' => 64,
+			'short_ping'  => true,
+			'callback'    => 'thunderblog_comment',
+		)
+	);
+	
+	if ( ! comments_open() ) :
+		?>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'thunderblog' ); ?></p>
+		<?php
+	endif;
+endif;
 
-	<?php if (!comments_open()): ?>
-		<p class="no-comments"><?= _e('Comments are closed.', 'thunderblog') ?></p>
-	<?php endif; ?>
-<?php endif; ?>
-
-<?= comment_form([
-	'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="btn %3$s">%4$s</button>',
-]) ?>
+echo comment_form(
+	array(
+		'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="btn %3$s">%4$s</button>',
+	)
+);
+?>

@@ -10,14 +10,18 @@
  */
 ?>
 
-<?= get_header() ?>
+<?php get_header(); ?>
 
 <main class="page">
-	<h1 class="text-center"><?= the_title() ?></h1>
+	<h1 class="text-center"><?php the_title() ?></h1>
 	<section class="content">
-		<?= get_the_content() ?>
-		<?php if ( comments_open() || get_comments_number() ) comments_template(); ?>
+		<?php the_content() ?>
+		<?php
+			if ( comments_open() || get_comments_number() ) {
+				comments_template();
+			}
+		?>
 	</section>
 </main>
 
-<?= get_footer() ?>
+<?php get_footer(); ?>
