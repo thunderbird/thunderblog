@@ -26,7 +26,7 @@
 		<nav class="d-init-xl">
 			<?php get_template_part('parts/nav'); ?>
 		</nav>
-		<button class="btn btn-icon btn-flat search ml-auto" id="search">
+		<button class="btn btn-icon btn-flat search ml-auto" id="search" aria-label="<?php _e( 'Search', 'thunderblog' ); ?>">
 			<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
 				<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 				<circle cx="10" cy="10" r="7" />
