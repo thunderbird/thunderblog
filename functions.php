@@ -11,6 +11,8 @@
 add_theme_support( 'post-thumbnails' );
 // enable Wordpress generated titles
 add_theme_support( 'title-tag' );
+// enable automatic RSS links in the header
+add_theme_support( 'automatic-feed-links' );
 
 // navigation menus for top and footer menu
 function thunderblog_register_menus() {
