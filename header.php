@@ -26,13 +26,23 @@
 		<nav class="d-init-xl">
 			<?php get_template_part('parts/nav'); ?>
 		</nav>
-		<button class="btn btn-icon btn-flat search ml-auto" id="search" aria-label="<?php _e( 'Search', 'thunderblog' ); ?>">
-			<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
-				<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-				<circle cx="10" cy="10" r="7" />
-				<line x1="21" y1="21" x2="15" y2="15" />
-			</svg>
-		</button>
+		<div class="d-flex gap-05 ml-auto">
+			<button class="btn btn-icon btn-flat search" id="search" aria-label="<?php _e( 'Search', 'thunderblog' ); ?>">
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+					<circle cx="10" cy="10" r="7" />
+					<line x1="21" y1="21" x2="15" y2="15" />
+				</svg>
+			</button>
+			<a href="<?php echo get_bloginfo('rss2_url') ?>" class="btn btn-icon btn-flat rss" id="rss" aria-label="<?php _e( 'RSS', 'thunderblog' ); ?>">
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+					<circle cx="5" cy="19" r="1" />
+					<path d="M4 4a16 16 0 0 1 16 16" />
+					<path d="M4 11a9 9 0 0 1 9 9" />
+				</svg>
+			</a>
+		</div>
 		<div class="actions d-flex-m">
 			<?php if ( get_theme_mod( 'download_url' ) ) : ?>
 			<a class="btn btn-primary" href="<?php echo get_theme_mod('download_url'); ?>" target="_blank">

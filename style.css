@@ -630,6 +630,9 @@ nav.pagination {
 .text-center {
 	text-align: center;
 }
+.d-flex {
+	display: flex;
+}
 .ml-auto {
 	margin-left: auto;
 }
