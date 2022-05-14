@@ -42,9 +42,9 @@ Tags: one-column, accessibility-ready, custom-menu, featured-images, footer-widg
 }
 @media (prefers-color-scheme: dark) {
 	:root {
-		--c:                      #ffffff;
-		--c-background:           #17243e;
-		--c-neutral-accent2:       #ececf7;
+		--c:                     #ffffff;
+		--c-background:          #17243e;
+		--c-neutral-accent2:     #ececf7;
 		--c-primary-low-accent2: #93abdc;
 		--c-primary-high-t01:    rgba(147, 171, 220, 0.1);
 	}
