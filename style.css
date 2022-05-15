@@ -561,7 +561,7 @@ main.post .comments .comment > blockquote {
 	margin: 0;
 }
 main.post .comments .comment > blockquote p {
-	margin: 0;
+	margin: 0 0 .5rem 0;
 }
 main.post .comments .comment > .comment {
 	margin: 1.5rem 0 0 2.5rem;
