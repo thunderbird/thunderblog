@@ -500,9 +500,10 @@ main.post .content h2 {
 }
 main.post .content figure {
 	margin: 1rem 0;
+	text-align: center;
 }
 main.post .content figure img {
-	width: 100%;
+	max-width: 100%;
 }
 main.post .content figure figcaption {
 	text-align: center;
