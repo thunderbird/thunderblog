@@ -20,6 +20,7 @@
 		</svg>
 		<?php echo get_the_date(); ?>
 	</time>
+	<?php if (array_key_exists('author', $args)): ?>
 	<a class="author" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID', $args['author'] ) ); ?>">
 		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-s" viewBox="0 0 24 24">
 			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -28,6 +29,7 @@
 		</svg>
 		<?php echo get_the_author_meta( 'display_name', $args['author'] ); ?>
 	</a>
+	<?php endif; ?>
 	<a class="responses" href="<?php echo rtrim( the_permalink(), '/' ); ?>#c">
 		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-s" viewBox="0 0 24 24">
 			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
