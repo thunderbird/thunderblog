@@ -15,13 +15,14 @@
 <main>
 	<section class="featured">
 	<?php 
-		$latest_posts = get_posts( array( 'numberposts' => 1 ) );
+		$sticky = get_option( 'sticky_posts' );
+		$latest_posts = get_posts( array( 'numberposts' => 1, 'include' => $sticky ) );
 		$post = count( $latest_posts ) > 0 ? $latest_posts[0] : null;
 	?>
 	<?php if ( $post ) : ?>
 		<article>
 			<div class="content">
-				<span class="category"><?php _e( 'Latest Post', 'thunderblog' ); ?></span>
+				<span class="category"><?php _e( isset( $sticky[0] ) ? 'Featured Post' : 'Latest Post', 'thunderblog' ); ?></span>
 				<a class="title" href="<?php the_permalink( $post ); ?>">
 					<h1><?php echo $post->post_title; ?></h1>
 				</a>
