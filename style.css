@@ -156,7 +156,6 @@ textarea:focus {
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-	background: transparent;
 }
 .btn.btn-flat {
 	box-shadow: none;
@@ -657,4 +656,7 @@ nav.pagination {
 }
 .gap-05 {
 	gap: .5rem;
+}
+.bg-transparent {
+	background: transparent;
 }
