@@ -27,14 +27,14 @@
 			<?php get_template_part('parts/nav'); ?>
 		</nav>
 		<div class="d-flex gap-05 ml-auto">
-			<button class="btn btn-icon btn-flat search" id="search" aria-label="<?php _e( 'Search', 'thunderblog' ); ?>">
+			<button class="btn btn-icon btn-flat bg-transparent search" id="search" aria-label="<?php _e( 'Search', 'thunderblog' ); ?>">
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
 					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 					<circle cx="10" cy="10" r="7" />
 					<line x1="21" y1="21" x2="15" y2="15" />
 				</svg>
 			</button>
-			<a href="<?php echo get_bloginfo('rss2_url') ?>" class="btn btn-icon btn-flat rss" id="rss" aria-label="<?php _e( 'RSS', 'thunderblog' ); ?>">
+			<a href="<?php echo get_bloginfo('rss2_url') ?>" class="btn btn-icon btn-flat bg-transparent rss d-flex-m" id="rss" aria-label="<?php _e( 'RSS', 'thunderblog' ); ?>" target="_blank">
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
 					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 					<circle cx="5" cy="19" r="1" />
@@ -95,7 +95,16 @@
 	<nav id="mobile" class="mobile-nav">
 		<?php get_template_part('parts/nav'); ?>
 		<div class="actions d-none-m">
-			<a class="btn btn-primary btn-icon" href="https://www.thunderbird.net/download/" target="_blank">
+			<a class="btn btn-icon btn-neutral" href="<?php echo get_bloginfo('rss2_url') ?>" aria-label="<?php _e( 'RSS', 'thunderblog' ); ?>" target="_blank">
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+					<circle cx="5" cy="19" r="1" />
+					<path d="M4 4a16 16 0 0 1 16 16" />
+					<path d="M4 11a9 9 0 0 1 9 9" />
+				</svg>
+				<span><?php _e( 'RSS Feed', 'thunderblog' ); ?></span>
+			</a>
+			<a class="btn btn-icon btn-primary" href="https://www.thunderbird.net/download/" target="_blank">
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
 					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 					<path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
@@ -104,7 +113,7 @@
 				</svg>
 				<span><?php _e( 'Download', 'thunderblog' ); ?> Thunderbird</span>
 			</a>
-			<a class="btn btn-love btn-icon" href="https://give.thunderbird.net" target="_blank">
+			<a class="btn btn-icon btn-love" href="https://give.thunderbird.net" target="_blank">
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
 					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 					<path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
