@@ -525,6 +525,17 @@ main.post .content figure img {
 main.post .content figure figcaption {
 	text-align: center;
 }
+main.post .content figure.alignright,
+main.post .content figure.alignleft {
+	margin-top: 0;
+	margin-bottom: .5rem;
+}
+main.post .content figure.alignleft {
+	margin-right: 1rem;
+}
+main.post .content figure.alignright {
+	margin-left: 1rem;
+}
 main.post .tags {
 	display: flex;
 	gap: .5rem;
