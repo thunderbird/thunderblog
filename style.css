@@ -50,7 +50,7 @@ Tags: one-column, accessibility-ready, custom-menu, featured-images, footer-widg
 	}
 }
 
-html, body {
+html, body:not(.wp-admin) {
 	background: var(--c-background);
 	color: var(--c);
 	font-family: 'Open Sans', X-LocaleSpecific, sans-serif;
@@ -186,10 +186,15 @@ textarea:focus {
 	fill: none;
 	width: 24px;
 	height: 24px;
+	transition: stroke .1s ease-in-out;
 }
 .icon.icon-s {
 	width: 16px;
 	height: 16px;
+}
+.icon.icon-m {
+	width: 32px;
+	height: 32px;
 }
 .emoji {
 	display: inline;
