@@ -35,8 +35,9 @@ Tags: one-column, accessibility-ready, custom-menu, featured-images, footer-widg
 	--c-neutral-high:        #ececf7;
 	--c-neutral-high-accent: #cacad8;
 	--c-mail:                #64748b;
-	--c-whatsapp:            #0a4e47;
 	--c-twitter:             #1d9bf0;
+	--c-whatsapp:            #0a4e47;
+	--c-telegram:            #1da1de;
 	--c-linkedin:            #0a66c2;
 	--content-width:         1080px;
 	--featured-height:       450px;
@@ -572,11 +573,14 @@ main.post .social a:hover {
 main.post .social a.social-mail:hover .icon {
 	stroke: var(--c-mail);
 }
+main.post .social a.social-twitter:hover .icon {
+	stroke: var(--c-twitter);
+}
 main.post .social a.social-whatsapp:hover .icon {
 	stroke: var(--c-whatsapp);
 }
-main.post .social a.social-twitter:hover .icon {
-	stroke: var(--c-twitter);
+main.post .social a.social-telegram:hover .icon {
+	stroke: var(--c-telegram);
 }
 main.post .social a.social-linkedin:hover .icon {
 	stroke: var(--c-linkedin);
