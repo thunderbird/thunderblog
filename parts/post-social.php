@@ -9,6 +9,20 @@
 ?>
 
 <section class="social" id="c">
+	<!-- Mail -->
+	<a
+		href="mailto:?subject=<?php echo get_the_title() ?>&body=<?php echo get_the_excerpt() ?> <?php echo get_permalink() ?>"
+		class="social-mail"
+		target="_blank"
+		title="<?php _e( 'Share this article via email', 'thunderblog' ); ?>"
+		aria-label="<?php _e( 'Share this article via email', 'thunderblog' ); ?>"
+	>
+		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-m" viewBox="0 0 24 24">
+			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+			<rect x="3" y="5" width="18" height="14" rx="2" />
+			<polyline points="3 7 12 13 21 7" />
+		</svg>
+	</a>
 	<!-- Twitter -->
 	<a
 		href="https://twitter.com/intent/tweet?original_referer=<?php echo urlencode( get_site_url() ); ?>&text=<?php echo urlencode( get_the_title() ); ?>&url=<?php echo urlencode(get_permalink()) ?>&via=mozthunderbird"
