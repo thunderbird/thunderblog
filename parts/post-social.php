@@ -23,6 +23,20 @@
 			<polyline points="3 7 12 13 21 7" />
 		</svg>
 	</a>
+	<!-- WhatsApp -->
+	<a
+		href="https://api.whatsapp.com/send?phone=&text=<?php echo get_the_title() ?> <?php echo get_permalink() ?>"
+		class="social-whatsapp"
+		target="_blank"
+		title="<?php _e( 'Share this article via WhatsApp', 'thunderblog' ); ?>"
+		aria-label="<?php _e( 'Share this article via WhatsApp', 'thunderblog' ); ?>"
+	>
+		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-m" viewBox="0 0 24 24">
+			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+			<path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+			<path d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1" />
+		</svg>
+	</a>
 	<!-- Twitter -->
 	<a
 		href="https://twitter.com/intent/tweet?original_referer=<?php echo urlencode( get_site_url() ); ?>&text=<?php echo urlencode( get_the_title() ); ?>&url=<?php echo urlencode(get_permalink()) ?>&via=mozthunderbird"
