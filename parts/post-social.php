@@ -80,4 +80,17 @@
 			<path d="M16 16v-3a2 2 0 0 0 -4 0" />
 		</svg>
 	</a>
+	<!-- Facebook -->
+	<a
+		href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>"
+		class="social-facebook"
+		target="_blank"
+		title="<?php _e( 'Share this article on Facebook', 'thunderblog' ); ?>"
+		aria-label="<?php _e( 'Share this article on Facebook', 'thunderblog' ); ?>"
+	>
+		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-m" viewBox="0 0 24 24">
+			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+			<path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+		</svg>
+	</a>
 </section>

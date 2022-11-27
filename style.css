@@ -39,6 +39,7 @@ Tags: one-column, accessibility-ready, custom-menu, featured-images, footer-widg
 	--c-whatsapp:            #0a4e47;
 	--c-telegram:            #1da1de;
 	--c-linkedin:            #0a66c2;
+	--c-facebook:            #1877f2;
 	--content-width:         1080px;
 	--featured-height:       450px;
 	--border-radius:         3px;
@@ -584,6 +585,9 @@ main.post .social a.social-telegram:hover .icon {
 }
 main.post .social a.social-linkedin:hover .icon {
 	stroke: var(--c-linkedin);
+}
+main.post .social a.social-facebook:hover .icon {
+	stroke: var(--c-facebook);
 }
 main.post .comments h2 {
 	margin: 2rem 0;
