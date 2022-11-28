@@ -40,6 +40,7 @@ Tags: one-column, accessibility-ready, custom-menu, featured-images, footer-widg
 	--c-telegram:            #1da1de;
 	--c-linkedin:            #0a66c2;
 	--c-facebook:            #1877f2;
+	--c-reddit:              #cc3700;
 	--content-width:         1080px;
 	--featured-height:       450px;
 	--border-radius:         3px;
@@ -588,6 +589,9 @@ main.post .social a.social-linkedin:hover .icon {
 }
 main.post .social a.social-facebook:hover .icon {
 	stroke: var(--c-facebook);
+}
+main.post .social a.social-reddit:hover .icon {
+	stroke: var(--c-reddit);
 }
 main.post .comments h2 {
 	margin: 2rem 0;
