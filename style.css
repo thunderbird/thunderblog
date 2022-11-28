@@ -34,8 +34,13 @@ Tags: one-column, accessibility-ready, custom-menu, featured-images, footer-widg
 	--c-neutral-accent2:     #34343a;
 	--c-neutral-high:        #ececf7;
 	--c-neutral-high-accent: #cacad8;
+	--c-mail:                #64748b;
 	--c-twitter:             #1d9bf0;
+	--c-whatsapp:            #0a4e47;
+	--c-telegram:            #1da1de;
 	--c-linkedin:            #0a66c2;
+	--c-facebook:            #1877f2;
+	--c-reddit:              #cc3700;
 	--content-width:         1080px;
 	--featured-height:       450px;
 	--border-radius:         3px;
@@ -50,7 +55,7 @@ Tags: one-column, accessibility-ready, custom-menu, featured-images, footer-widg
 	}
 }
 
-html, body {
+html, body:not(.wp-admin) {
 	background: var(--c-background);
 	color: var(--c);
 	font-family: 'Open Sans', X-LocaleSpecific, sans-serif;
@@ -186,10 +191,15 @@ textarea:focus {
 	fill: none;
 	width: 24px;
 	height: 24px;
+	transition: stroke .1s ease-in-out;
 }
 .icon.icon-s {
 	width: 16px;
 	height: 16px;
+}
+.icon.icon-m {
+	width: 32px;
+	height: 32px;
 }
 .emoji {
 	display: inline;
@@ -562,11 +572,26 @@ main.post .social a .icon {
 main.post .social a:hover {
 	transform: scale(1.1);
 }
+main.post .social a.social-mail:hover .icon {
+	stroke: var(--c-mail);
+}
 main.post .social a.social-twitter:hover .icon {
 	stroke: var(--c-twitter);
 }
+main.post .social a.social-whatsapp:hover .icon {
+	stroke: var(--c-whatsapp);
+}
+main.post .social a.social-telegram:hover .icon {
+	stroke: var(--c-telegram);
+}
 main.post .social a.social-linkedin:hover .icon {
 	stroke: var(--c-linkedin);
+}
+main.post .social a.social-facebook:hover .icon {
+	stroke: var(--c-facebook);
+}
+main.post .social a.social-reddit:hover .icon {
+	stroke: var(--c-reddit);
 }
 main.post .comments h2 {
 	margin: 2rem 0;
