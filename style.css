@@ -642,10 +642,10 @@ nav.pagination .nav-links {
 	gap: .5rem;
 }
 nav.pagination .nav-links > a {
-  padding: 2px;
+	padding: 2px;
 }
 nav.pagination .nav-links > span.current {
-  padding: 2px;
+	padding: 2px;
 	opacity: .7;
 }
 /* responsivness */
