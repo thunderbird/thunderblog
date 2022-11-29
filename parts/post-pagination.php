@@ -9,6 +9,11 @@
 ?>
 
 <nav class="pagination">
-	<?php echo previous_posts_link( __( '&laquo; Newer posts', 'thunderblog' ) ); ?>
-	<?php echo next_posts_link( __( 'Older posts &raquo;', 'thunderblog' ) ); ?>
+	<?php 
+		the_posts_pagination( array(
+			'mid_size'  => 2,
+			'prev_text' => __( '&laquo; Newer posts', 'thunderblog' ),
+			'next_text' => __( 'Older posts &raquo;', 'thunderblog' ),
+		) );
+	?>
 </nav>

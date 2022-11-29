@@ -636,12 +636,18 @@ main.post .comments .comment-form > p:not(:first-child):not(:last-child):not(.co
 }
 
 /* pagination */
-nav.pagination {
+nav.pagination .nav-links {
 	display: flex;
 	justify-content: center;
-	gap: 2rem;
+	gap: .5rem;
 }
-
+nav.pagination .nav-links > a {
+	padding: 2px;
+}
+nav.pagination .nav-links > span.current {
+	padding: 2px;
+	opacity: .7;
+}
 /* responsivness */
 .d-init-m, .d-init-l, .d-init-xl, .d-init-xxl, .d-flex-m, .d-flex-l { display: none !important; }
 
