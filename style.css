@@ -702,3 +702,16 @@ nav.pagination .nav-links > span.current {
 .bg-transparent {
 	background: transparent;
 }
+
+/* Newsletter button/text */
+.newsletter-signup {
+	display: flex;
+}
+.newsletter-email {
+	float: left;
+	width: 100%;
+}
+.btn-newsletter {
+	float: right;
+}
+
