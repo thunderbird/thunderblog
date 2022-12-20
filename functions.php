@@ -126,7 +126,30 @@ function thunderblog_customize_register ( $wp_customize ) {
 		)
 	);
 }
+
+/**
+ * Adds the featured image (if any) to the (rss/atom/whatever) feed.
+ *
+ * @param string $text
+ *
+ * @return string
+ */
+function thunderblog_add_featured_image_to_feed( string $text ): string {
+	global $post;
+
+	// No featured image? Skip!
+	if ( ! has_post_thumbnail( $post ) ) {
+		return $text;
+	}
+
+	$featured_image = get_the_post_thumbnail( $post, [ 640, 360 ] );
+
+	return "<p>{$featured_image}</p>{$text}";
+}
+
 add_action( 'customize_register', 'thunderblog_customize_register' );
+
+add_filter( 'the_content_feed', 'thunderblog_add_featured_image_to_feed');
 
 // load styles
 wp_enqueue_style( 'normalize', get_template_directory_uri() . '/assets/normalize.css' );
