@@ -32,7 +32,7 @@
                             <div class="mc-field-group">
                                 <label for="mce-EMAIL"><?php _e('Email Address') ?></label>
                                 <div class="newsletter-signup">
-                                    <input type="email" value="" name="EMAIL" class="required email newsletter-email" id="mce-EMAIL" required>
+                                    <input type="email" value="" name="EMAIL" class="required email input-newsletter" id="mce-EMAIL" required>
                                     <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-newsletter">
                                 </div>
                                 <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>

@@ -706,8 +706,9 @@ nav.pagination .nav-links > span.current {
 /* Newsletter button/text */
 .newsletter-signup {
 	display: flex;
+	gap: 0.5rem;
 }
-.newsletter-email {
+.input-newsletter {
 	float: left;
 	width: 100%;
 }
