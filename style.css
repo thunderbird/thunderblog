@@ -705,10 +705,15 @@ nav.pagination .nav-links > span.current {
 
 /* Newsletter button/text */
 .newsletter-signup {
+	border: 2px solid var(--c-neutral-high-accent);
+	border-radius: var(--border-radius);
+	background-color: var(--c);
+	padding: 0.25rem;
+	max-width: 65%;
 	display: flex;
-	gap: 0.5rem;
 }
 .input-newsletter {
+	border: none;
 	float: left;
 	width: 100%;
 }
@@ -716,3 +721,9 @@ nav.pagination .nav-links > span.current {
 	float: right;
 }
 
+@media screen and (max-width: 640px) {
+	/* Un-squish our signup form */
+	.newsletter-signup {
+		max-width: 100%;
+	}
+}
