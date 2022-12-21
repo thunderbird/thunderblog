@@ -126,13 +126,55 @@ function thunderblog_customize_register ( $wp_customize ) {
 		)
 	);
 }
+
+/**
+ * Adds the featured image (if any) to the (rss/atom/whatever) feed.
+ *
+ * @param string $text
+ *
+ * @return string
+ */
+function thunderblog_add_featured_image_to_feed( string $text ): string {
+	global $post;
+
+	// No featured image? Skip!
+	if ( ! has_post_thumbnail( $post ) ) {
+		return $text;
+	}
+
+	$featured_image = get_the_post_thumbnail( $post, [ 640, 360 ] );
+
+	return "<p>{$featured_image}</p>{$text}";
+}
+
+/**
+ * Echo's out a link entry containing the posts featured image, and caption if available.
+ * @return void
+ */
+function thunderblog_output_featured_image_as_link() {
+	global $post;
+
+	// No featured image? Skip!
+	if ( ! has_post_thumbnail( $post ) ) {
+		return;
+	}
+
+	$featured_image   = get_the_post_thumbnail_url( $post );
+	$featured_caption = get_the_post_thumbnail_caption( $post ) ?? $post->post_title;
+
+	echo "<link rel='thumbnail' href='{$featured_image}' title='{$featured_caption}' />";
+}
+
 add_action( 'customize_register', 'thunderblog_customize_register' );
 
-add_action( 'wp_enqueue_scripts', function () {
-    // load styles
-    wp_enqueue_style( 'normalize', get_template_directory_uri() . '/assets/normalize.css' );
-    wp_enqueue_style( 'style', get_stylesheet_uri() );
+add_filter( 'the_content_feed', 'thunderblog_add_featured_image_to_feed' );
+add_filter( 'atom_entry', 'thunderblog_output_featured_image_as_link' );
 
-    // load scripts
-    wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/main.js', [], 1.0, true );
-});
+add_action( 'wp_enqueue_scripts', function () {
+	// load styles
+	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/assets/normalize.css' );
+	wp_enqueue_style( 'style', get_stylesheet_uri() );
+
+	// load scripts
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/main.js', [], 1.0, true );
+} );
