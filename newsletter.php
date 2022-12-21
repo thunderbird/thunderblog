@@ -30,10 +30,9 @@
                     <form action="https://thunderbird.us12.list-manage.com/subscribe/post?u=f8051cc8637cf3ff79661f382&amp;id=56428f2efc&amp;f_id=00bbfee0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
                         <div id="mc_embed_signup_scroll">
                             <div class="mc-field-group">
-                                <label for="mce-EMAIL"><?php _e('Email Address') ?></label>
                                 <div class="newsletter-signup">
-                                    <input type="email" value="" name="EMAIL" class="required email input-newsletter" id="mce-EMAIL" required>
-                                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-newsletter">
+                                    <input type="email" value="" placeholder="<?php _e('Your Email') ?>" name="EMAIL" class="required email input-newsletter" id="mce-EMAIL" required>
+                                    <input type="submit" value="<?php _e('Sign me up!') ?>" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-newsletter">
                                 </div>
                                 <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
                             </div>
