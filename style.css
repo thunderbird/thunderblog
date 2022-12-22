@@ -702,3 +702,28 @@ nav.pagination .nav-links > span.current {
 .bg-transparent {
 	background: transparent;
 }
+
+/* Newsletter button/text */
+.newsletter-signup {
+	border: 2px solid var(--c-neutral-high-accent);
+	border-radius: var(--border-radius);
+	background-color: var(--c);
+	padding: 0.25rem;
+	max-width: 65%;
+	display: flex;
+}
+.input-newsletter {
+	border: none;
+	float: left;
+	width: 100%;
+}
+.btn-newsletter {
+	float: right;
+}
+
+@media screen and (max-width: 640px) {
+	/* Un-squish our signup form */
+	.newsletter-signup {
+		max-width: 100%;
+	}
+}
