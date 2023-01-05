@@ -7,6 +7,10 @@
  * @since 0.0.1
  */
 
+if ( ! defined( 'THUNDERBLOG_VERSION' ) ) {
+	define( 'THUNDERBLOG_VERSION', '1.0.9' );
+}
+
 // enable theme support for featured images
 add_theme_support( 'post-thumbnails' );
 // enable Wordpress generated titles
@@ -173,8 +177,8 @@ add_filter( 'atom_entry', 'thunderblog_output_featured_image_as_link' );
 add_action( 'wp_enqueue_scripts', function () {
 	// load styles
 	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/assets/normalize.css' );
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'style', get_stylesheet_uri(), [], THUNDERBLOG_VERSION );
 
 	// load scripts
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/main.js', [], 1.0, true );
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/main.js', [], THUNDERBLOG_VERSION, true );
 } );
