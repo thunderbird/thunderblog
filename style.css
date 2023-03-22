@@ -403,7 +403,7 @@ main > .featured article {
 main > .featured img {
 	max-height: calc(var(--featured-height) - 6rem);
 	width: 100%;
-	object-fit: cover;
+	object-fit: contain;
 }
 main > .featured article .category {
 	background: white;
