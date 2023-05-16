@@ -44,6 +44,11 @@ Tags: one-column, accessibility-ready, custom-menu, featured-images, footer-widg
 	--content-width:         1080px;
 	--featured-height:       450px;
 	--border-radius:         3px;
+
+	--form-background-color:       #ffffff;
+	--form-border-color:           #cacad8;
+	--form-border-color-focused:   #34343a;
+	--form-text-color:             #000000;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -52,6 +57,11 @@ Tags: one-column, accessibility-ready, custom-menu, featured-images, footer-widg
 		--c-neutral-accent2:     #ececf7;
 		--c-primary-low-accent2: #93abdc;
 		--c-primary-high-t01:    rgba(147, 171, 220, 0.1);
+
+		--form-background-color:       #0b1222;
+		--form-border-color:           #1c2f56;
+		--form-border-color-focused:   #93abdc;
+		--form-text-color:             #ffffff;
 	}
 }
 
@@ -100,9 +110,12 @@ a:hover {
 }
 input,
 textarea {
+	background-color: var(--form-background-color);
+	border: 2px solid var(--form-border-color);
+	border-radius: 3px;
+	color: var(--form-text-color);
 	padding: .25rem 1rem;
 	font-size: 1rem;
-	border: 2px solid var(--c-neutral-high-accent);
 	transition: background .2s, border .2s, box-shadow .2s, color .2s, -webkit-box-shadow .2s;
 }
 input[type=text] {
@@ -110,13 +123,12 @@ input[type=text] {
 }
 input:hover,
 textarea:hover {
-	border-color: var(--c-neutral-accent2);
+	box-shadow: 0 0 0 2px var(--form-border-color-focused);
 }
 input:focus,
 textarea:focus {
-	border-color: var(--c-neutral-accent2);
-	box-shadow: 0 0 0 .2rem rgba(0,0,0,.2);
-	border-radius: 0;
+	box-shadow: 0 0 0 2px var(--form-border-color-focused);
+	outline: none;
 }
 .btn,
 .wp-block-button>a {
