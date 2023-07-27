@@ -24,3 +24,6 @@ node_modules/
 
 # ignore local scripts
 *.sh
+
+# ignore files macOS adds
+*.DS_Store
