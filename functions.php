@@ -181,4 +181,19 @@ add_action( 'wp_enqueue_scripts', function () {
 
 	// load scripts
 	wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/main.js', [], THUNDERBLOG_VERSION, true );
+	wp_enqueue_script( 'scriptmodule', get_template_directory_uri() . '/assets/share-on-mastodon_v1.1.0.js', [], '1.1.0', true );
+	add_filter('script_loader_tag', 'add_type_module' , 10, 3);
 } );
+
+/**
+ * Serve a script as module
+ */
+function add_type_module($tag, $handle, $src) {
+	// if not your script, do nothing and return original $tag
+	if ( 'scriptmodule' !== $handle ) {
+			return $tag;
+	}
+	// change the script tag by adding type="module" and return it.
+	$tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
+	return $tag;
+}
