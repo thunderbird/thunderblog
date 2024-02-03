@@ -18,6 +18,7 @@
 	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/ios-icon-180.png" />
 	<link rel="icon" type="image/png" sizes="196x196" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/favicon-196.png" />
 	<link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/favicon.ico" />
+	<script defer type="module" src="https://cdn.jsdelivr.net/npm/@micahilbery/share-on-mastodon@1.1.0/share-on-mastodon.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 <body>
