@@ -590,6 +590,11 @@ main.post .social a .icon {
 main.post .social a:hover .icon {
 	transform: scale(1.1);
 }
+@media (prefers-reduced-motion) {
+	main.post .social a:hover .icon {
+		transform: none;
+	}
+}
 main.post .social a.social-mail:hover .icon {
 	stroke: var(--c-mail);
 }
