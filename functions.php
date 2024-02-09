@@ -95,7 +95,7 @@ function thunderblog_comment ( $comment, $args, $depth ) {
 		<?php
 			echo comment_reply_link(
 				array_merge(
-					$args, 
+					$args,
 					array(
 						'depth'     => $depth,
 						'max_depth' => $args['max_depth'],
@@ -181,7 +181,7 @@ add_action( 'wp_enqueue_scripts', function () {
 
 	// load scripts
 	wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/main.js', [], THUNDERBLOG_VERSION, true );
-	wp_enqueue_script( 'scriptmodule', get_template_directory_uri() . '/assets/share-on-mastodon_v1.1.0.min.js', [], '1.1.0', true );
+	wp_enqueue_script( 'scriptmodule', get_template_directory_uri() . '/assets/share-on-mastodon_v1.2.0.min.js', [], '1.2.0', true );
 	add_filter('script_loader_tag', 'add_type_module' , 10, 3);
 } );
 
