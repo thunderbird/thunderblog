@@ -20,16 +20,14 @@
 		</svg>
 		<?php echo get_the_date(); ?>
 	</time>
-	<?php if (array_key_exists('author', $args)): ?>
-	<a class="author" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID', $args['author'] ) ); ?>">
+	<span>
 		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-s" viewBox="0 0 24 24">
 			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 			<circle cx="12" cy="7" r="4" />
 			<path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
 		</svg>
-		<?php echo get_the_author_meta( 'display_name', $args['author'] ); ?>
-	</a>
-	<?php endif; ?>
+		<?php function_exists( 'coauthors_posts_links' ) ? coauthors_posts_links() : the_author_posts_link(); ?>
+	</span>
 	<a class="responses" href="<?php echo rtrim( the_permalink(), '/' ); ?>#c">
 		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-s" viewBox="0 0 24 24">
 			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>

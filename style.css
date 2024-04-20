@@ -430,19 +430,15 @@ main > .featured article a.title:hover {
 	text-decoration: underline;
 }
 main > .featured article .meta {
+	color: var(--c-primary-high);
 	display: flex;
 	gap: 1.5rem;
 	flex-wrap: wrap;
 }
 main > .featured article .meta > * {
-	color: var(--c-primary-high);
-	text-decoration: none;
 	display: flex;
 	align-items: center;
 	gap: 0.25rem;
-}
-main > .featured article .meta > a:hover {
-	text-decoration: underline;
 }
 main > .featured article .meta .icon {
 	stroke: var(--c-primary-high);
@@ -522,14 +518,15 @@ main.post .content .post-categories > li a {
 	color: white;
 }
 main.post .content .meta {
+	color: var(--c-primary-low-accent2);
 	margin-bottom: 3rem;
 	display: flex;
-	gap: 1.5rem;
+	gap: .25rem 1.5rem;
 	flex-wrap: wrap;
 }
 main.post .content .meta > * {
-	color: var(--c-primary-low-accent2);
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	gap: 0.25rem;
 }
