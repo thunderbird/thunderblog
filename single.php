@@ -25,7 +25,7 @@
 			<section class="content">
 				<?php the_category(); ?>
 				<?php the_title( '<h1>', '</h1>' ); ?>
-				<?php get_template_part('parts/post-meta', null, ['author' => get_the_author_meta('ID')]); ?>
+				<?php get_template_part('parts/post-meta'); ?>
 				<?php the_content(); ?>
 				<?php get_template_part('parts/post-tags'); ?>
 			</section>
