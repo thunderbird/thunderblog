@@ -42,7 +42,7 @@ Tags: one-column, accessibility-ready, custom-menu, featured-images, footer-widg
 	--c-linkedin:            #0a66c2;
 	--c-facebook:            #1877f2;
 	--c-reddit:              #cc3700;
-	--c-featured-link:			 #ececf7;  /* Featured posts are on a dark blue bg, this should be bright! */
+	--c-featured-link:       #ececf7;  /* Featured posts are on a dark blue bg, this should be bright! */
 	--content-width:         1080px;
 	--featured-height:       450px;
 	--border-radius:         3px;
@@ -433,7 +433,7 @@ main > .featured article a.title:hover {
 main > .featured article .meta {
 	color: var(--c-primary-high);
 	display: flex;
-	gap: 1.5rem;
+	gap: .25rem 1.5rem;
 	flex-wrap: wrap;
 }
 main > .featured article .meta a {
