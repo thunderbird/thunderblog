@@ -46,11 +46,10 @@
 		<div class="actions d-flex-m">
 			<?php if ( get_theme_mod( 'download_url' ) ) : ?>
 			<a class="btn btn-primary" href="<?php echo get_theme_mod('download_url'); ?>" target="_blank">
-				<span class="d-flex-l gap-05">
-					<?php _e('Download', 'thunderblog'); ?>
-					<span class="d-init-xxl">Thunderbird</span>
+				<span class="d-flex-xl gap-05">
+					<?php _e('Get Thunderbird', 'thunderblog'); ?>
 				</span>
-				<svg xmlns="http://www.w3.org/2000/svg" class="icon d-none-l" viewBox="0 0 24 24">
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon d-none-xl" viewBox="0 0 24 24">
 					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 					<path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
 					<polyline points="7 11 12 16 17 11" />
@@ -60,8 +59,8 @@
 			<?php endif; ?>
 			<?php if ( get_theme_mod( 'donation_url' ) ) : ?>
 			<a class="btn btn-love" href="<?php echo get_theme_mod('donation_url'); ?>" target="_blank">
-				<span class="d-flex-l"><?php _e('Donate', 'thunderblog'); ?></span>
-				<svg xmlns="http://www.w3.org/2000/svg" class="icon d-none-l" viewBox="0 0 24 24">
+				<span class="d-flex-xl"><?php _e('Donate', 'thunderblog'); ?></span>
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon d-none-xl" viewBox="0 0 24 24">
 					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 					<path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
 				</svg>
