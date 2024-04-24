@@ -678,7 +678,7 @@ nav.pagination .nav-links > span.current {
 	opacity: .7;
 }
 /* responsivness */
-.d-init-m, .d-init-l, .d-init-xl, .d-init-xxl, .d-flex-m, .d-flex-l { display: none !important; }
+.d-init-m, .d-init-l, .d-init-xl, .d-init-xxl, .d-flex-m, .d-flex-l, .d-flex-xl { display: none !important; }
 
 @media screen and (min-width: 640px) {
 	/* break: S -> M */
@@ -709,6 +709,7 @@ nav.pagination .nav-links > span.current {
 	.d-none-xl,
 	nav.mobile-nav.active { display: none !important; }
 	.d-init-xl { display: initial !important; }
+	.d-flex-xl { display: flex !important; }
 }
 @media screen and (min-width: 1200px) {
 	/* break: XL -> XXL */
