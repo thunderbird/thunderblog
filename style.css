@@ -79,6 +79,9 @@ html, body:not(.wp-admin) {
 }
 
 /* elements */
+h1, h2, h3, h4, h5, h6 {
+	text-wrap: balance;
+}
 h1 {
 	font-size: 3rem;
 	font-weight: 200;
@@ -98,11 +101,16 @@ h4 {
 	font-size: 1rem;
 	font-weight: 600;
 }
+
 hr {
 	height: 1px;
 	border: none;
 	background: var(--c-neutral-accent);
 }
+p {
+	text-wrap: pretty;
+}
+
 a {
 	color: var(--c-neutral-accent2);
 	transition: all .1s ease-in-out;
@@ -110,6 +118,7 @@ a {
 a:hover {
 	color: var(--c-primary-accent);
 }
+
 input,
 textarea {
 	background-color: var(--form-background-color);
