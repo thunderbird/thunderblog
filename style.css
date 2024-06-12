@@ -250,19 +250,18 @@ header {
 	top: 0;
 	z-index: 50;
 }
-header .logo {
+header .logo, header .custom-logo-link {
 	display: flex;
 	margin-right: 1rem;
-
-	.custom-logo-link {
-		display: inline-flex;
-	}
 
 	img {
 		flex-grow: 0;
 		height: 48px;
 		width: auto;
 	}
+}
+header .custom-logo-link {
+	display: inline-flex;
 }
 header nav ul {
 	display: flex;
@@ -308,7 +307,7 @@ footer {
   flex-direction: column;
   gap: 2rem;
 }
-footer .logo {
+footer .logo, footer .custom-logo-link {
 	align-self: center;
 
 	img {

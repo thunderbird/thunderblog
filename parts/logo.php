@@ -11,10 +11,10 @@
 
 ?>
 
-<a class="logo" href="<?php echo site_url(); ?>">
-	<?php if ( has_custom_logo() ) : ?>
+<?php if ( has_custom_logo() ) : ?>
 		<?php the_custom_logo(); ?>
-	<?php else: ?>
+<?php else: ?>
+<a class="logo" href="<?php echo site_url(); ?>">
 		<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/thunderbird_logo.svg" alt="Logo" />
-	<?php endif; ?>
 </a>
+<?php endif; ?>
