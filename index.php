@@ -21,18 +21,20 @@
 	?>
 	<?php if ( $post ) : ?>
 		<article>
+			<span class="category"><?php _e( isset( $sticky[0] ) ? 'Featured Post' : 'Latest Post', 'thunderblog' ); ?></span>
+			<a class="title" href="<?php the_permalink( $post ); ?>">
+				<h1><?php echo $post->post_title; ?></h1>
+			</a>
 			<div class="content">
-				<span class="category"><?php _e( isset( $sticky[0] ) ? 'Featured Post' : 'Latest Post', 'thunderblog' ); ?></span>
-				<a class="title" href="<?php the_permalink( $post ); ?>">
-					<h1><?php echo $post->post_title; ?></h1>
-				</a>
-				<?php get_template_part( 'parts/post-meta', null, array( 'author' => $post->post_author) ); ?>
-				<div class="description"><?php the_excerpt( $post ) ?></div>
-				<a class="btn btn-neutral-light" href="<?php the_permalink( $post ); ?>"><?php _e( 'Read more', 'thunderblog' ); ?></a>
+				<div>
+					<?php get_template_part( 'parts/post-meta', null, array( 'author' => $post->post_author) ); ?>
+					<div class="description"><?php the_excerpt( $post ) ?></div>
+					<a class="btn btn-neutral-light" href="<?php the_permalink( $post ); ?>"><?php _e( 'Read more', 'thunderblog' ); ?></a>
+				</div>
+				<?php if ( has_post_thumbnail( $post ) ) : ?>
+					<img class="d-init-xl" src="<?php echo get_the_post_thumbnail_url( $post ); ?>" alt="featured article title image">
+				<?php endif; ?>
 			</div>
-			<?php if ( has_post_thumbnail( $post ) ) : ?>
-				<img class="d-init-xl" src="<?php echo get_the_post_thumbnail_url( $post ); ?>" alt="featured article title image">
-			<?php endif; ?>
 		</article>
 	<?php endif; ?>
 	</section>
