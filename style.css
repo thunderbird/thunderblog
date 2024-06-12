@@ -573,6 +573,16 @@ main.post .content figure.alignleft {
 main.post .content figure.alignright {
 	margin-left: 1rem;
 }
+main.post .content figure.alignwide,
+main.post .content figure.alignfull {
+	width: 100%;
+
+	&.wp-block-embed.wp-embed-aspect-16-9 iframe {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 16/9;
+	}
+}
 main.post .tags {
 	display: flex;
 	gap: .5rem;

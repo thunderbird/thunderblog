@@ -17,6 +17,8 @@ add_theme_support( 'post-thumbnails' );
 add_theme_support( 'title-tag' );
 // enable automatic RSS links in the header
 add_theme_support( 'automatic-feed-links' );
+// enable alignment block options
+add_theme_support( 'align-wide' );
 
 // navigation menus for top and footer menu
 function thunderblog_register_menus() {
