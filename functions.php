@@ -182,18 +182,34 @@ add_action( 'wp_enqueue_scripts', function () {
 	// load scripts
 	wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/main.js', [], THUNDERBLOG_VERSION, true );
 	wp_enqueue_script( 'scriptmodule', get_template_directory_uri() . '/assets/share-on-mastodon_v1.2.0.min.js', [], '1.2.0', true );
-	add_filter('script_loader_tag', 'add_type_module' , 10, 3);
+	add_filter('script_loader_tag', 'thunderblog_add_type_module' , 10, 3);
 } );
+
+add_action( 'after_setup_theme', 'thunderblog_custom_logo_setup' );
 
 /**
  * Serve a script as module
  */
-function add_type_module($tag, $handle, $src) {
+function thunderblog_add_type_module($tag, $handle, $src) {
 	// if not your script, do nothing and return original $tag
 	if ( 'scriptmodule' !== $handle ) {
-			return $tag;
+		return $tag;
 	}
 	// change the script tag by adding type="module" and return it.
 	$tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
 	return $tag;
+}
+
+/**
+ * Enable header custom logo
+ */
+function thunderblog_custom_logo_setup() {
+	$defaults = array(
+		'height'               => 64,
+		'width'                => 200,
+		'flex-height'          => true,
+		'flex-width'           => true,
+		'unlink-homepage-logo' => true, 
+	);
+	add_theme_support( 'custom-logo', $defaults );
 }
