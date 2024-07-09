@@ -253,12 +253,11 @@ header {
 header .logo, header .custom-logo-link {
 	display: flex;
 	margin-right: 1rem;
-
-	img {
-		flex-grow: 0;
-		height: 48px;
-		width: auto;
-	}
+}
+header .logo, header .custom-logo-link img {
+	flex-grow: 0;
+	height: 48px;
+	width: auto;
 }
 header .custom-logo-link {
 	display: inline-flex;
@@ -309,11 +308,10 @@ footer {
 }
 footer .logo, footer .custom-logo-link {
 	align-self: center;
-
-	img {
-		height: 64px;
-		width: auto;
-	}
+}
+footer .logo, footer .custom-logo-link img {
+	height: 64px;
+	width: auto;
 }
 footer hr {
 	max-width: var(--content-width);
@@ -587,12 +585,12 @@ main.post .content figure.alignright {
 main.post .content figure.alignwide,
 main.post .content figure.alignfull {
 	width: 100%;
-
-	&.wp-block-embed.wp-embed-aspect-16-9 iframe {
-		width: 100%;
-		height: auto;
-		aspect-ratio: 16/9;
-	}
+}
+main.post .content figure.alignwide.wp-block-embed.wp-embed-aspect-16-9 iframe,
+main.post .content figure.alignfull.wp-block-embed.wp-embed-aspect-16-9 iframe {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16/9;
 }
 main.post .tags {
 	display: flex;
