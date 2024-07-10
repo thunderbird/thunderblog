@@ -250,11 +250,13 @@ header {
 	top: 0;
 	z-index: 50;
 }
-header .logo, header .custom-logo-link {
+header .logo,
+header .custom-logo-link {
 	display: flex;
 	margin-right: 1rem;
 }
-header .logo, header .custom-logo-link img {
+header .logo img,
+header .custom-logo-link img {
 	flex-grow: 0;
 	height: 48px;
 	width: auto;
@@ -306,10 +308,12 @@ footer {
   flex-direction: column;
   gap: 2rem;
 }
-footer .logo, footer .custom-logo-link {
+footer .logo,
+footer .custom-logo-link {
 	align-self: center;
 }
-footer .logo, footer .custom-logo-link img {
+footer .logo img,
+footer .custom-logo-link img {
 	height: 64px;
 	width: auto;
 }
