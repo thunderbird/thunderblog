@@ -19,6 +19,8 @@ add_theme_support( 'title-tag' );
 add_theme_support( 'automatic-feed-links' );
 // enable alignment block options
 add_theme_support( 'align-wide' );
+// disable permalink guessing
+apply_filters( 'do_redirect_guess_404_permalink', '__return_false' );
 
 // navigation menus for top and footer menu
 function thunderblog_register_menus() {
