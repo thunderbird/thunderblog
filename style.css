@@ -36,7 +36,7 @@ Tags: one-column, accessibility-ready, custom-menu, featured-images, footer-widg
 	--c-neutral-high-accent: #cacad8;
 	--c-mail:                #64748b;
 	--c-mastodon:            #6364ff;
-	--c-twitter:             #1d9bf0;
+	--c-bluesky:             #2198ff;
 	--c-whatsapp:            #0a4e47;
 	--c-telegram:            #1da1de;
 	--c-linkedin:            #0a66c2;
@@ -637,8 +637,8 @@ main.post .social a.social-mail:hover .icon {
 main.post .social a.social-mastodon:hover .icon {
 	stroke: var(--c-mastodon);
 }
-main.post .social a.social-twitter:hover .icon {
-	stroke: var(--c-twitter);
+main.post .social a.social-bluesky:hover .icon {
+	stroke: var(--c-bluesky);
 }
 main.post .social a.social-whatsapp:hover .icon {
 	stroke: var(--c-whatsapp);
