@@ -37,3 +37,10 @@ Keep in mind, that the space (especially on the top menu bar) is limited, don't 
 Three widget locations are supported (_Appearance > Widgets_), corresponding to the three-column-footer area.
 
 It's recommended to set `H4` headings followed by an unorderd list of items.
+
+## Docker Development Setup
+
+Clone this [repo](https://github.com/MelissaAutumn/thunderblog-local/) and follow instructions to set up.
+
+## Deployment
+Files are uploaded via sftp. Check the "Thunderblog FTP Access" credential in the Services vault in 1password.
